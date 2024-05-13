@@ -60,12 +60,17 @@ jobs:
       - name: Install SSH key
         run: |
           mkdir -p ~/.ssh
+          touch ~/.ssh/known_hosts
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
       
+      - name: Add Docker registry to known_hosts
+        run: |
+          ssh-keyscan -t rsa ${{ vars.DEPLOY_HOST }} >> ~/.ssh/known_hosts
+
       - name: Deploy to server
         run: |
           scp backend/compose.prod.yaml ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/compose.yaml
