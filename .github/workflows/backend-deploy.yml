@@ -66,12 +66,6 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
       
-      - name: Add Deploy Host to known_hosts
-        run: |
-          cat ~/.ssh/known_hosts
-          ssh-keyscan -t rsa ${{ vars.DEPLOY_HOST }} >> ~/.ssh/known_hosts
-          cat ~/.ssh/known_hosts
-      
       - name: Deploy to server
         run: |
           scp backend/compose.prod.yaml ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/compose.yaml
