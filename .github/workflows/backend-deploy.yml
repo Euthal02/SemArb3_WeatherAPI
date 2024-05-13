@@ -1,0 +1,67 @@
+name: Deploy the Backend Flask APP
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10
+      
+      - name: Install dependencies
+        run: |
+          pip install -r backend/requirements.txt
+          pip install pytest
+      
+      - name: Run unit tests
+        run: |
+          echo "Running unit tests... This will take about 60 seconds."
+          python -m pytest
+
+  build-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Login to GitHub Container Registry
+        run: echo "${{ secrets.CONTAINER_INTEGRATION }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t ghcr.io/${{ github.repository }}/production-app:latest backend/.
+          docker push ghcr.io/${{ github.repository }}/production-app:latest
+
+  deploy-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Install SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo ${{ secrets.SSH_PRIVATE_KEY }} | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+      
+      - name: Add Docker registry to known_hosts
+        run: |
+          ssh-keyscan -t rsa ${{ vars.DEPLOY_HOST }} >> ~/.ssh/known_hosts
+      
+      - name: Deploy to server
+        run: |
+          scp compose.prod.yaml ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/compose.yaml
+          ssh ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }} "cd /home/${{ vars.DEPLOY_USER }}; 
+          echo "${{ secrets.CONTAINER_INTEGRATION }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          docker-compose pull;
+          docker-compose up -d"
