@@ -68,7 +68,9 @@ jobs:
       
       - name: Add Deploy Host to known_hosts
         run: |
+          cat ~/.ssh/known_hosts
           ssh-keyscan -t rsa ${{ vars.DEPLOY_HOST }} >> ~/.ssh/known_hosts
+          cat ~/.ssh/known_hosts
       
       - name: Deploy to server
         run: |
