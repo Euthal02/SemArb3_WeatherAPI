@@ -72,7 +72,7 @@ jobs:
       
       - name: Deploy to server
         run: |
-          scp compose.prod.yaml ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/compose.yaml
+          scp backend/compose.prod.yaml ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/compose.yaml
           ssh ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }} "cd /home/${{ vars.DEPLOY_USER }}; 
           echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
           docker-compose pull;
