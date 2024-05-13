@@ -37,9 +37,6 @@ jobs:
       - name: Login to GitHub Container Registry
         run: echo "${{ secrets.CONTAINER_INTEGRATION }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-      - name: lowercase Repo Name
-        run: echo ::set-env name=IMAGE_REPOSITORY::$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')
-      
       - name: Build and push Docker image
         run: |
           docker build -t ghcr.io/euthal02/semarb3_weatherapi/production-app:latest backend/.
