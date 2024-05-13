@@ -1,4 +1,4 @@
 # SemArb3_WeatherAPI
 
-This repo is a documentation and development platform, for the Semster Thesis of Marco Kälin and Dennis Buathong.
-For the sake of our teachers having access to this repo, it has to be public. Enjoy the look into our work and leave feedback if you spot something.
+Dieses Repo ist eine Dokumentations- und Entwicklungsplattform für die Semesterarbeit von Marco Kälin und Dennis Buathong.
+Damit unsere Lehrer Zugang zu diesem Repo haben, muss es öffentlich sein. Genießen Sie den Einblick in unsere Arbeit und hinterlassen Sie Feedback, wenn Ihnen etwas auffällt.
