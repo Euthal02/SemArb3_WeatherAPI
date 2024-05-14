@@ -13,9 +13,9 @@ Während des Hauptteils wird mit Sprints gearbeitet. Vor eines Sprints werden di
 
 Am Ende eines Sprints sollten die gesetzten Ziele erreicht werden. Dann werden neue Ziele gesetzt und der nächste Sprint beginnt.
 
-![Hauptteil schreiben](../ressources/images/general/hauptteil-schreiben.jpg)
+![Hauptteil](../ressources/icons/homepage.png){: width="250px" }
 
-[Quelle Bild - Hauptteil schreiben](../anhang/quellen.html#516-hauptteil-schreiben)
+[Quelle Bild - Icons](../anhang/quellen.html#54-icons)
 
 In der Dokumentation wird der Hauptteil genauer verfolgt und Erkenntnisse festgehalten.
 

@@ -21,6 +21,6 @@ Dazu gehört unter anderem:
 - Projektmethode
 - SEUSAG
 
-![SOLL IST Vergleich](../ressources/images/projectmanagement/vergleich.jpg)
+![Einleitung](../ressources/icons/training.png){: width="250px" }
 
-[Quelle Bild - SOLL IST Vergleich](../anhang/quellen.html#515-soll-ist-vergleich)
+[Quelle Bild - Icons](../anhang/quellen.html#54-icons)
