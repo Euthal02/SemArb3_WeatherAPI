@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 4. Schlussteil
+title: 5. Schlussteil
 has_children: true
-nav_order: 400
+nav_order: 500
 ---
 
-# 4. Schlussteil
+# 5. Schlussteil
 
 Im Schlussteil vergleichen wir die gestellten Ziele und erahnte Risiken mit dem effektiven Projekt.
 
