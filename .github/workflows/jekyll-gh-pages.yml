@@ -9,6 +9,7 @@ name: Deploy Jekyll site to Pages
 # build on push
 on: 
   push:
+    # this means that the workflow will only trigger if there are changes in this directory
     paths:
       - 'docs/**'
 

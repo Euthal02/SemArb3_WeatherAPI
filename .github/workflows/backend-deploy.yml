@@ -2,8 +2,9 @@ name: Deploy the Backend Flask App
 
 on:
   push:
-    paths-ignore:
-      - 'docs/**'
+    # this means that the workflow will only trigger if there are changes in this directory
+    paths:
+      - 'backend/**'
     branches:
       - main
 
