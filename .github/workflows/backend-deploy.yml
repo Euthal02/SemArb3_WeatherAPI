@@ -1,7 +1,9 @@
-name: Deploy the Backend Flask APP
+name: Deploy the Backend Flask App
 
 on:
   push:
+    paths-ignore:
+      - 'docs/**'
     branches:
       - main
 
