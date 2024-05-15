@@ -13,11 +13,7 @@ def create_app(config_class=Config):
     db.init_app(app)
 
     # Register blueprints here
-    from app.students import bp as routes_bp
-    from app.courses import bp as courses_bp
     from app.users import bp as users_bp
-    app.register_blueprint(routes_bp, url_prefix='/students')
-    app.register_blueprint(courses_bp, url_prefix='/courses')
     app.register_blueprint(users_bp, url_prefix='/users')
 
     # Datenbanktabellen anlegen

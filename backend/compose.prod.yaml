@@ -2,14 +2,14 @@ version: '3.9'
 
 services:
 
-  msvc-bp-prod-api:
+  semarb3_flask_prod:
     image: ghcr.io/euthal02/semarb3_weatherapi:latest
     build:
       context: .
       dockerfile: 'Dockerfile.prod'
-    container_name: msvc-bp-prod-api
+    container_name: semarb3_flask_prod
     environment:
-      - DATABASE_URI=mysql+mysqlconnector://root:root@msvc-bp-prod-db:3306/msvc-prod
+      - DATABASE_URI=mysql+mysqlconnector://root:root@semarb3_db_prod:3306/semarb3_prod
       - SECRET_KEY=hallomarco!8844
       - DASHBOARD_ENABLED=True
     ports:
@@ -17,16 +17,16 @@ services:
     volumes:
       - monitoring-prod-dashboard:/var/tmp
     depends_on:
-      msvc-bp-prod-db:
+      semarb3_db_prod:
         condition: service_healthy
 
-  msvc-bp-prod-db:
+  semarb3_db_prod:
     image: mysql:5.7
-    container_name: msvc-bp-prod-db
+    container_name: semarb3_db_prod
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: msvc-prod
+      MYSQL_DATABASE: semarb3_prod
     healthcheck:
       test: mysqladmin ping -h localhost -uroot --password=$$MYSQL_ROOT_PASSWORD
       start_period: 2s
@@ -36,8 +36,8 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - msvc-prod-db:/var/lib/mysql
+      - semarb3_db_prod:/var/lib/mysql
 
 volumes:
-  msvc-prod-db:
+  semarb3_db_prod:
   monitoring-prod-dashboard:

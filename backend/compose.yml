@@ -1,7 +1,7 @@
 version: '3.9'
 services:
-  persistent-flask:
-    container_name: persistent_flask_service
+  semarb3_flask_dev:
+    container_name: semarb3_flask_dev
     build:
       context: .
     ports:
@@ -10,7 +10,7 @@ services:
       - .:/app
       - monitoring-dashboard:/var/tmp
     environment:
-      - DATABASE_URI=mysql+mysqlconnector://root:root@msvc-db:3306/msvc
+      - DATABASE_URI=mysql+mysqlconnector://root:root@semarb3_db_dev:3306/semarb3_db
       - CHOKIDAR_USEPOLLING=true
       - SECRET_KEY=hallomarco!8844
       - FLASK_DEBUG=1
@@ -19,25 +19,25 @@ services:
       - FLASK_APP=app
       - DASHBOARD_ENABLED=True
     depends_on:
-      msvc-db: 
+      semarb3_db_dev: 
         condition: service_healthy
 
-  msvc-db:
+  semarb3_db_dev:
     image: mysql:5.7
-    container_name: msvc-db
+    container_name: semarb3_db_dev
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: msvc
+      MYSQL_DATABASE: semarb3_db
     ports:
       - 3306:3306
     volumes:
-      - my-db:/var/lib/mysql
+      - semarb3_db_dev:/var/lib/mysql
     healthcheck:
       test: "mysqladmin ping -h localhost --user=root --password=root"
       interval: 5s
       timeout: 5s
       retries: 20
 volumes:
-  my-db:
+  semarb3_db_dev:
   monitoring-dashboard:
