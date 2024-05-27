@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 2.4 Zeitplan
+title: 2.5 Zeitplan
 parent: 2. Einleitung
-nav_order: 204
+nav_order: 205
 ---
 
 Damit wir durch die Semesterarbeit einen Leitfaden habe und die Arbeit vorantreiben können, haben wir zwei Zeitpläne erstellt. Diese unterscheiden sich in der Tiefe der Planung.

@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 2.1 Ziele
+title: 2.2 Ziele
 parent: 2. Einleitung
-nav_order: 201
+nav_order: 202
 ---
 
 # Ziele der Semesterarbeit
