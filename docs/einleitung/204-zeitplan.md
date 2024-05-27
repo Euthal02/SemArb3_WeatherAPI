@@ -5,6 +5,11 @@ parent: 2. Einleitung
 nav_order: 204
 ---
 
+Damit wir durch die Semesterarbeit einen Leitfaden habe und die Arbeit vorantreiben können, haben wir zwei Zeitpläne erstellt. Diese unterscheiden sich in der Tiefe der Planung.
+
+Das ist der grobe Zeitplan
+
+
  **Datum**           | **Aktivität** |                                             
 | ------------------- | ----------------------------------------------------------|
 | 06.05.2024 - 10.05.2024 | Abgabe und Besprechung Einreichungsformular Semesterarbeit |
