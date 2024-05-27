@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 2.5 Zeitplan
+title: 2.4 Zeitplan
 parent: 2. Einleitung
-nav_order: 205
+nav_order: 204
 ---
 
 # Zeitplan der Semesterarbeit

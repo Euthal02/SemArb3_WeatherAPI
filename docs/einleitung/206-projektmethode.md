@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 2.6 Projektmethode
+title: 2.5 Projektmethode
 parent: 2. Einleitung
-nav_order: 206
+nav_order: 205
 ---
 
 # Projektmethode
@@ -13,7 +13,7 @@ Kanban ist eine agile Projektmanagement-Methode, die auf der Visualisierung von 
 
 Durch Kanban-Boards wird der aktuelle Stand der Arbeit deutlich sichtbar, was dabei hilft, Engpässe zu identifizieren und Verbesserungspotenziale aufzuzeigen. Zusätzlich fördert Kanban die Zusammenarbeit im Team und trägt zur kontinuierlichen Verbesserung des Arbeitsprozesses bei. Interessanterweise eignet sich Kanban auch hervorragend für kleine Projekte, die von wenigen oder einzelnen Personen durchgeführt werden.
 
-![Kanban Board](../ressources/icons/kanban.png)
+![Kanban Board](../ressources/icons/kanban.png){: width="250px" }
 
 [Quelle Bild - Icons](../anhang/quellen.html#54-icons)
 ## Scrum
@@ -22,7 +22,7 @@ Scrum ist ein Rahmenwerk für ein spezifisches Projektmanagementverfahren, das s
 
 Im Mittelpunkt von Scrum steht ein iterativer Ansatz, der sich auf inkrementelle Verbesserungen konzentriert. Dies wird durch aufeinanderfolgende, eigenständige Arbeitsphasen (Sprints) erreicht, in denen verschiedene Versionen eines Produkts erstellt werden. Diese Sprints werden wiederholt, bis ein zufriedenstellendes und vollständiges Produkt entsteht.
 
-![Scrum](../ressources/icons/scrum.png)
+![Scrum](../ressources/icons/scrum.png){: width="250px" }
 
 [Quelle Bild - Icons](../anhang/quellen.html#54-icons)
 

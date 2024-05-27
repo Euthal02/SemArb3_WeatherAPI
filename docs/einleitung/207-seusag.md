@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 2.7 Seusag
+title: 2.6 Seusag
 parent: 2. Einleitung
-nav_order: 207
+nav_order: 206
 ---
 
 Test

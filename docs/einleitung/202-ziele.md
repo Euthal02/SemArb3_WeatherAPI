@@ -9,7 +9,7 @@ nav_order: 202
 
 Damit die Semesterarbeit gewertet werden kann, müssen Ziele definiert und erreicht werden.
 
-![Goal](../ressources/icons/leadership.png)
+![Goal](../ressources/icons/leadership.png){: width="250px" }
 
 [Quelle Bild - Icons](../anhang/quellen.html#54-icons)
 

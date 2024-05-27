@@ -2,13 +2,15 @@
 layout: default
 title: 4. Sprints
 has_children: true
-nav_order: 500
+nav_order: 400
 ---
 
-# 4. Sprints
+# 4. Sprints und Scrum Meetings
 
-In diesem Abschnitt werden wir die Sprints genauer anschauen und unsere Erkenntnisse beschreiben.
+In diesem Abschnitt werden wir die Sprints genauer anschauen und unsere Erkenntnisse beschreiben. Da wir als Grupp arbeiten werden die Sprints in Scrum Meetings besprochen.
 
-![Learnings](../ressources/icons/learning.png){: width="250px" }
+!
+
+![Sprint](../ressources/icons/agile.png){: width="250px" }
 
 [Quelle Bild - Icons](../anhang/quellen.html#54-icons)

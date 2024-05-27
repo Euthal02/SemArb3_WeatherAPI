@@ -16,10 +16,10 @@ Dazu gehört unter anderem:
 
 - Ziele
 - Risiken
-- Scrum Planungen
 - Zeitplan
 - Projektmethode
 - SEUSAG
+- Scrum Meeting
 
 ![Einleitung](../ressources/icons/training.png){: width="250px" }
 
