@@ -5,6 +5,8 @@ parent: 2. Einleitung
 nav_order: 205
 ---
 
+# Zeitplan der Semesterarbeit
+
 Damit wir durch die Semesterarbeit einen Leitfaden habe und die Arbeit vorantreiben können, haben wir zwei Zeitpläne erstellt. Diese unterscheiden sich in der Tiefe der Planung.
 
 Das ist der grobe Zeitplan
