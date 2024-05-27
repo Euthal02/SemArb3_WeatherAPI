@@ -35,6 +35,6 @@ In GitHub-Projekten können verschiedene Ansichten für Kanban erstellt werden. 
 
 Hier findet man den Link zu meinem Projektmanagement:
 
-[3 Semesterarbeit](https://github.com/users/Euthal02/projects/4/views/2)
+[3 Semesterarbeit - WeatherAPI](https://github.com/users/Euthal02/projects/4/views/2)
 
 ## Scrum Meeetings
