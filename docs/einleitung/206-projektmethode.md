@@ -12,3 +12,7 @@ nav_order: 206
 Kanban ist eine agile Projektmanagement-Methode, die auf der Visualisierung von Arbeitsabläufen basiert. Dabei werden Karten verwendet, um die ausstehenden Arbeiten und den bereits erzielten Fortschritt darzustellen. Diese Methode ermöglicht es Teams, ihre Arbeitsabläufe zu organisieren, zu visualisieren und zu optimieren, indem der Fokus auf die Steuerung des Workflows und die Vermeidung von Überlastung gelegt wird.
 
 Durch Kanban-Boards wird der aktuelle Stand der Arbeit deutlich sichtbar, was dabei hilft, Engpässe zu identifizieren und Verbesserungspotenziale aufzuzeigen. Zusätzlich fördert Kanban die Zusammenarbeit im Team und trägt zur kontinuierlichen Verbesserung des Arbeitsprozesses bei. Interessanterweise eignet sich Kanban auch hervorragend für kleine Projekte, die von wenigen oder einzelnen Personen durchgeführt werden.
+
+![Kanban Board](../ressources/icons/kanban.png)
+
+[Quelle Bild - Icons](../anhang/quellen.html#54-icons)
