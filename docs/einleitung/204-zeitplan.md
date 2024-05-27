@@ -14,3 +14,5 @@ nav_order: 204
 | 15.06.2024            | Wetter von Wetter-APIs abfragbar                                             |
 | 22.06.2024          | Tagesvorschläge der KI anhand der Wettervoraussagen |
 | 05.07.2024 - 08.07.2024 | Abgabe der Arbeit / Abnahme / Schlusspräsentationen (online) |
+
+Um den genauen Zeitplan einzusehen, muss das Projektmanagement im Github geöffnet werden. [Projektplanung](https://github.com/users/Euthal02/projects/4)
