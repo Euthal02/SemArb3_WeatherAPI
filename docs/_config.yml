@@ -46,7 +46,7 @@ plugins:
   - jekyll-feed
 back_to_top: true
 back_to_top_text: "Back to top"
-color_scheme: dark
+#color_scheme: dark
 callouts:
   information:
     title: Information
