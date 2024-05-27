@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 4.3 Sprint 3
-has_children: true
+parent: 4. Sprints
 nav_order: 403
 ---
 
