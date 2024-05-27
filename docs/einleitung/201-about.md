@@ -11,6 +11,8 @@ Für die 3. Semesterarbeit haben wir uns überlegt, eine Wetter-App zu entwickel
 
 ![Idea](../ressources/icons/idea.png)
 
+[Quelle Bild - Icons](../anhang/quellen.html#54-icons)
+
 Dies ist unsere erste Semesterarbeit, die wir als Gruppe/Team durchführen. Wir wollten uns einer weiteren Herausforderung stellen und ein Projekt realitätsnah umsetzen.
 Damit die Bewertung auch Seperiert durchgeführt werden kann, wird Marco eine Dokumentation über das Backend machen und Dennis über das Frontend.
 
