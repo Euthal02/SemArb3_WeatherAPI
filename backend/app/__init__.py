@@ -16,13 +16,16 @@ def create_app(config_class=Config):
     from app.users import bp as users_bp
     app.register_blueprint(users_bp, url_prefix='/users')
 
+    from app.weather import bp as weather_bp
+    app.register_blueprint(weather_bp, url_prefix='/weather')
+
     # Datenbanktabellen anlegen
     with app.app_context():
         db.create_all()
 
     @app.get('/')
     def absolute_root_path():
-        return {'message': 'this is the feature branch'}
+        return {'message': 'Welcome to our Weather App!'}
 
     if app.config['DASHBOARD_ENABLED']:
         dashboard.config.init_from(file='monitoring_dashboard_config.cfg')

@@ -48,14 +48,14 @@ def update_user(user_id, json_data, database_table=UsersModel):
     return user
 
 # remove user by id
-@bp.delete('/<int:user_id>/remove')
+@bp.delete('/<int:user_id>/delete')
 @bp.auth_required(token_auth)
-@bp.output(UsersOut)
+@bp.output(UsersOut(many=True))
 def delete_user(user_id, database_table=UsersModel):
     user = db.get_or_404(database_table, user_id)
     db.session.delete(user)
     db.session.commit()
-    return user
+    return database_table.query.all()
 
 # create new user
 @bp.post('/login')
