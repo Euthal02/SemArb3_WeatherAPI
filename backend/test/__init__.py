@@ -12,7 +12,7 @@ def client():
     app.config.update({
         "TESTING": True,
         "SECRET_KEY": 'hallozusammen!4400',
-        "DATABASE_URI": 'sqlite:///' + os_path.join(basedir, 'app.db'),
+        "SQLALCHEMY_DATABASE_URI ": 'sqlite:///' + os_path.join(basedir, 'app.db'),
         "DASHBOARD_ENABLED": False
     })
 
