@@ -99,20 +99,6 @@ jobs:
 
       - name: Connect to server
         run: |
-          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}
-          cd /home/${{ vars.DEPLOY_USER }};
-
-      - name: Login to GitHub Container registry
-        uses: docker/login-action@v1
-        env:
-          GITHUB_USER: ${{ github.actor }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          registry: ghcr.io
-          username: $GITHUB_USER
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Deploy Containers to server
-        run: |
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }} "cd /home/${{ vars.DEPLOY_USER }}
           docker-compose pull;
           docker-compose up -d"
