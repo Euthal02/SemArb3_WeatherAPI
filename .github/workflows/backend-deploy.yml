@@ -18,6 +18,7 @@ concurrency:
 
 jobs:
   test-job:
+    environment: backend_env_vars
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -32,6 +33,16 @@ jobs:
         run: |
           pip install -r backend/requirements.txt
           pip install pytest
+        
+      - name: Create ENV variables
+        run: |
+          export API_KEY=${{ secrets.API_KEY }}
+          export ASSISTANT_ID=${{ secrets.ASSISTANT_ID }}
+          export ORGANIZATION=${{ secrets.ORGANIZATION }}
+          export PROJECT=${{ secrets.PROJECT }}
+          export SECRET_KEY=${{ secrets.SECRET_KEY }}
+          export DASHBOARD_ENABLED=${{ vars.DASHBOARD_ENABLED }}
+          export DATABASE_URI=${{ vars.DATABASE_URI }}
       
       - name: Run unit tests
         run: |
@@ -97,10 +108,13 @@ jobs:
           echo DASHBOARD_ENABLED=${{ vars.DASHBOARD_ENABLED }} >> .env
           echo DATABASE_URI=${{ vars.DATABASE_URI }} >> .env
 
-      - name: Deploy to server
+      - name: Copy files to Server
         run: |
           scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q backend/compose.prod.yaml ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/compose.yaml
           scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q .env ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/.env
+
+      - name: Connect & Deploy on server
+        run: |
           ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}
           cd /home/${{ vars.DEPLOY_USER }};
           echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
