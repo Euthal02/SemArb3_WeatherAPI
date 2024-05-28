@@ -4,8 +4,10 @@ services:
     build:
       context: .
       dockerfile: 'Dockerfile.test'
-      env_file:
-      - path: .env
+    environment:
+      - SECRET_KEY = 'hallozusammen!4400'
+      - DATABASE_URI = 'sqlite:///app.db
+      - DASHBOARD_ENABLED = False
     container_name: semarb3_flask_test
     ports:
       - 5000:5000
