@@ -34,16 +34,6 @@ jobs:
           pip install -r backend/requirements.txt
           pip install pytest
         
-      - name: Create ENV variables
-        run: |
-          export API_KEY=${{ secrets.API_KEY }}
-          export ASSISTANT_ID=${{ secrets.ASSISTANT_ID }}
-          export ORGANIZATION=${{ secrets.ORGANIZATION }}
-          export PROJECT=${{ secrets.PROJECT }}
-          export SECRET_KEY=${{ secrets.SECRET_KEY }}
-          export DASHBOARD_ENABLED=${{ vars.DASHBOARD_ENABLED }}
-          export DATABASE_URI=${{ vars.DATABASE_URI }}
-      
       - name: Run unit tests
         run: |
           echo "Running unit tests... This will take about 60 seconds."
@@ -78,7 +68,9 @@ jobs:
           target: final
           push: true
           tags: |
-            $REGISTRY/$OWNER/$IMAGE_NAME:latest
+            $REGISTRY/$OWNER/$IMAGE_NAME:$(date +%s)
+          build-args: |
+              ENVIRONMENT=production
 
   deploy-job:
     runs-on: ubuntu-latest
