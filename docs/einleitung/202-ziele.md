@@ -5,7 +5,7 @@ parent: 2. Einleitung
 nav_order: 202
 ---
 
-# Ziele der Semesterarbeit
+# 2.2 Ziele der Semesterarbeit
 
 Damit die Semesterarbeit gewertet werden kann, müssen Ziele definiert und erreicht werden.
 

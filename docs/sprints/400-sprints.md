@@ -7,8 +7,7 @@ nav_order: 400
 
 # 4. Sprints und Scrum Meetings
 
-In diesem Abschnitt werden wir die Sprints genauer anschauen und unsere Erkenntnisse beschreiben. Da wir als Grupp arbeiten werden die Sprints in Scrum Meetings besprochen.
-
+In diesem Abschnitt werden wir die Sprints genauer anschauen und unsere Erkenntnisse beschreiben. Da wir als Gruppe arbeiten werden die Sprints in Scrum Meetings besprochen.
 
 ![Sprint](../ressources/icons/agile.png){: width="250px" }
 

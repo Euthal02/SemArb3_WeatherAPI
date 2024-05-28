@@ -5,7 +5,7 @@ parent: 2. Einleitung
 nav_order: 205
 ---
 
-# Projektmethode
+# 2.5 Projektmethode
 
 ## Kanban
 

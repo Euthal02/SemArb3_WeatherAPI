@@ -5,7 +5,7 @@ parent: 2. Einleitung
 nav_order: 203
 ---
 
-# Risiken
+# 2.3 Risiken
 
 Bei Projektarbeiten ist immer mit Risiken zu rechnen. Diese können aber im Vorhinein eingeschätzt und Massnahmen geplant werden. Dadurch wird gewährleistet, dass das Projekt wie geplant durchgeführt und die Ziele erreicht werden können.
 
