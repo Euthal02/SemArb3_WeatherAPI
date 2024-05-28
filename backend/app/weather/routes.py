@@ -1,5 +1,5 @@
 from app.weather import bp 
-from app.weather.api import get_lat_and_lon_from_city_name, make_relay_api_call_based_on_lat_and_lon
+from backend.app.weather.weather_api import get_lat_and_lon_from_city_name, make_relay_api_call_based_on_lat_and_lon
 from app.auth import token_auth
 from app.models.weather import LocationIn, WeatherOut
 #import logging
@@ -10,7 +10,15 @@ from app.models.weather import LocationIn, WeatherOut
 @bp.input(LocationIn, location='query')
 #@bp.output(WeatherOut)
 def weather_data_from_cityname_and_countrycode(query_data):
+    # first, get the forecast data
     city_name = query_data['city_name']
     country_code = query_data['country_code']
     lattitude, longitude = get_lat_and_lon_from_city_name(city_name, country_code)
-    return make_relay_api_call_based_on_lat_and_lon(lattitude, longitude)
+    raw_forecast_data = make_relay_api_call_based_on_lat_and_lon(lattitude, longitude)
+
+    # second, we have to create a funny forecast from it.
+    # ToDo: create funny forecast
+    funny_forecast = raw_forecast_data
+
+    # and finally return it.
+    return funny_forecast

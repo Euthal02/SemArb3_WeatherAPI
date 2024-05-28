@@ -22,9 +22,6 @@ def create_app(config_class=Config, config_overwrites=dict()):
     from app.weather import bp as weather_bp
     app.register_blueprint(weather_bp, url_prefix='/weather')
 
-    from app.llm import bp as llm_bp
-    app.register_blueprint(llm_bp, url_prefix='/llm')
-
     # Datenbanktabellen anlegen
     with app.app_context():
         db.create_all()
