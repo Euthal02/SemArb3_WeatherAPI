@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: 'Dockerfile.test'
-        env_file:
+      env_file:
       - path: .env
     container_name: semarb3_flask_test
     ports:
