@@ -61,7 +61,8 @@ jobs:
   
       - name: Build and push Docker image
         run: |
-          docker build -t ghcr.io/euthal02/semarb3_weatherapi:latest -f backend/Dockerfile.prod .
+          cd backend/
+          docker build -t ghcr.io/euthal02/semarb3_weatherapi:latest -f Dockerfile.prod .
           docker push ghcr.io/euthal02/semarb3_weatherapi:latest
 
   deploy-job:
@@ -84,13 +85,15 @@ jobs:
       - name: Create .env file
         run: |
           touch .env
-          echo API_KEY=${{ secrets.API_KEY }} >> .env
-          echo ASSISTANT_ID=${{ secrets.ASSISTANT_ID }} >> .env
-          echo ORGANIZATION=${{ secrets.ORGANIZATION }} >> .env
-          echo PROJECT=${{ secrets.PROJECT }} >> .env
-          echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
-          echo DASHBOARD_ENABLED=${{ vars.DASHBOARD_ENABLED }} >> .env
-          echo DATABASE_URI=${{ vars.DATABASE_URI }} >> .env
+          echo API_KEY="${{ secrets.API_KEY }}" >> .env
+          echo ASSISTANT_ID="${{ secrets.ASSISTANT_ID }}" >> .env
+          echo ORGANIZATION="${{ secrets.ORGANIZATION }}" >> .env
+          echo PROJECT="${{ secrets.PROJECT }}" >> .env
+          echo SECRET_KEY="${{ secrets.SECRET_KEY }}" >> .env
+          echo MYSQL_ROOT_PASSWORD="${{ secrets.MYSQL_ROOT_PASSWORD }}" >> .env
+          echo MYSQL_DATABASE="${{ vars.MYSQL_DATABASE }}" >> .env
+          echo DASHBOARD_ENABLED="${{ vars.DASHBOARD_ENABLED }}" >> .env
+          echo DATABASE_URI="${{ vars.DATABASE_URI }}" >> .env
 
       - name: Copy files to Server
         run: |

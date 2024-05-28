@@ -17,9 +17,8 @@ services:
     image: mysql:5.7
     container_name: semarb3_db_prod
     restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: semarb3_prod
+    env_file:
+      - path: .env
     healthcheck:
       test: mysqladmin ping -h localhost -uroot --password=$$MYSQL_ROOT_PASSWORD
       start_period: 2s
