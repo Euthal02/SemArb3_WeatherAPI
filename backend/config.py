@@ -1,7 +1,4 @@
-from os import path as os_path
 from os import environ as os_environ
-
-basedir = os_path.abspath(os_path.dirname(__file__))
 
 class Config:
     # env variables
