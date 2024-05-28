@@ -1,17 +1,10 @@
 version: '3.9'
-
 services:
-
   semarb3_flask_prod:
     image: ghcr.io/euthal02/semarb3_weatherapi:latest
-    build:
-      context: .
-      dockerfile: 'Dockerfile.prod'
     container_name: semarb3_flask_prod
-    environment:
-      - DATABASE_URI=mysql+mysqlconnector://root:root@semarb3_db_prod:3306/semarb3_prod
-      - SECRET_KEY=hallomarco!8844
-      - DASHBOARD_ENABLED=True
+    env_file:
+      - path: .env
     ports:
       - 5000:5000
     volumes:

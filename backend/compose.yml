@@ -18,6 +18,10 @@ services:
       - FLASK_PORT=5000
       - FLASK_APP=app
       - DASHBOARD_ENABLED=True
+      - ORGANIZATION = 'org-Vx2q9NIHeJrNCqNTIOZ5C576'
+      - PROJECT = 'proj_cdIcvrykTAvgjfS3k3eJSbjX'
+      - API_KEY = 'sk-api-user-NuXmGbmdrn02jpyAfptYT3BlbkFJRuPf7ZUuvd8r6NBGmwVi'
+      - ASSISTANT_ID = 'asst_AdqTcay6tPbTZi2IWKqxXdvD'
     depends_on:
       semarb3_db_dev: 
         condition: service_healthy
@@ -38,6 +42,7 @@ services:
       interval: 5s
       timeout: 5s
       retries: 20
+
 volumes:
   semarb3_db_dev:
   monitoring-dashboard:

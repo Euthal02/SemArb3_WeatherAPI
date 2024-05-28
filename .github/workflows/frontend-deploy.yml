@@ -1,0 +1,78 @@
+name: Deploy the Frontend App
+
+on:
+  push:
+    # this means that the workflow will only trigger if there are changes in this directory
+    paths:
+      - 'frontend/**'
+    branches:
+      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow one concurrent deployment
+concurrency:
+  group: "frontend"
+  cancel-in-progress: true
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.12.2
+      
+#       - name: Install dependencies
+#         run: |
+#           pip install -r backend/requirements.txt
+#           pip install pytest
+      
+#       - name: Run unit tests
+#         run: |
+#           echo "Running unit tests... This will take about 60 seconds."
+#           python -m pytest
+
+#   build-job:
+#     runs-on: ubuntu-latest
+#     needs: test-job
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v2
+      
+#       - name: Login to GitHub Container Registry
+#         run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+#       - name: Build and push Docker image
+#         run: |
+#           docker build -t ghcr.io/euthal02/semarb3_weatherapi:latest backend/.
+#           docker push ghcr.io/euthal02/semarb3_weatherapi:latest
+
+#   deploy-job:
+#     runs-on: ubuntu-latest
+#     needs: build-job
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v2
+      
+#       - name: Install SSH key
+#         run: |
+#           mkdir -p ~/.ssh
+#           echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+#           chmod 600 ~/.ssh/id_rsa
+#         shell: bash
+#         env:
+#           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+
+#       - name: Deploy to server
+#         run: |
+#           scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q backend/compose.prod.yaml ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/compose.yaml
+#           ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }} "cd /home/${{ vars.DEPLOY_USER }}; 
+#           echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+#           docker-compose pull;
+#           docker-compose up -d"

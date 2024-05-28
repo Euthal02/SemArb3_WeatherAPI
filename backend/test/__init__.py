@@ -1,8 +1,8 @@
-import pytest
+from pytest import fixture as pytest_fixture
 from app import create_app
 from test.create_test_data import create_test_data
 
-@pytest.fixture
+@pytest_fixture
 def client():
 
     app = create_app()

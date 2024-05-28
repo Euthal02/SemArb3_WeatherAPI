@@ -44,17 +44,34 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      
-      - name: Login to GitHub Container Registry
-        run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-      - name: Build and push Docker image
-        run: |
-          docker build -t ghcr.io/euthal02/semarb3_weatherapi:latest backend/.
-          docker push ghcr.io/euthal02/semarb3_weatherapi:latest
+      - name: Login to GitHub Container registry
+        uses: docker/login-action@v1
+        env:
+          GITHUB_USER: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          registry: ghcr.io
+          username: $GITHUB_USER
+          password: ${{ secrets.GITHUB_TOKEN }}
+  
+      - name: Build and Push Docker Image
+        env:
+          REGISTRY: ghcr.io
+          OWNER: ${{ github.actor }}
+          IMAGE_NAME: ${{ github.repository }}
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: backend/Dockerfile.prod
+          target: final
+          push: true
+          tags: |
+            $REGISTRY/$OWNER/$IMAGE_NAME:latest
 
   deploy-job:
     runs-on: ubuntu-latest
+    environment: backend_env_vars
     needs: build-job
     steps:
       - name: Checkout repository
@@ -67,12 +84,25 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
         shell: bash
         env:
-          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Create .env file
+        run: |
+          touch .env
+          echo API_KEY=${{ secrets.API_KEY }} >> .env
+          echo ASSISTANT_ID=${{ secrets.ASSISTANT_ID }} >> .env
+          echo ORGANIZATION=${{ secrets.ORGANIZATION }} >> .env
+          echo PROJECT=${{ secrets.PROJECT }} >> .env
+          echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
+          echo DASHBOARD_ENABLED=${{ vars.DASHBOARD_ENABLED }} >> .env
+          echo DATABASE_URI=${{ vars.DATABASE_URI }} >> .env
 
       - name: Deploy to server
         run: |
           scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q backend/compose.prod.yaml ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/compose.yaml
-          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }} "cd /home/${{ vars.DEPLOY_USER }}; 
+          scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q .env ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/.env
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}
+          cd /home/${{ vars.DEPLOY_USER }};
           echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
           docker-compose pull;
           docker-compose up -d"

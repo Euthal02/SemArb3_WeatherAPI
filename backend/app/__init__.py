@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 from apiflask import APIFlask
-import flask_monitoringdashboard as dashboard
 from config import Config
 from app.extensions import db
-
+import flask_monitoringdashboard as dashboard
 
 def create_app(config_class=Config):
     app = APIFlask(__name__)
@@ -18,6 +17,9 @@ def create_app(config_class=Config):
 
     from app.weather import bp as weather_bp
     app.register_blueprint(weather_bp, url_prefix='/weather')
+
+    from app.llm import bp as llm_bp
+    app.register_blueprint(llm_bp, url_prefix='/llm')
 
     # Datenbanktabellen anlegen
     with app.app_context():

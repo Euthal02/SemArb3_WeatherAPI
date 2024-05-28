@@ -1,11 +1,8 @@
 from app.weather import bp 
-#from app.extensions import db
-#from werkzeug.security import generate_password_hash
-from apiflask import abort as flask_abort
-#import logging
 from app.weather.api import get_lat_and_lon_from_city_name, make_relay_api_call_based_on_lat_and_lon
 from app.auth import token_auth
-from app.models.weather import LocationIn, WeatherIn, WeatherOut
+from app.models.weather import LocationIn, WeatherOut
+#import logging
 
 # get weather info
 @bp.get('/lookup')

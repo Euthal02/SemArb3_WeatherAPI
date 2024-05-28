@@ -4,7 +4,8 @@ from werkzeug.security import generate_password_hash
 from apiflask import abort as flask_abort
 from app.auth import token_auth
 from app.models.users import UsersModel, UsersIn, UsersOut, LoginIn, TokenOut
-import logging
+from logging import warning as logging_warning
+from logging import info as logging_info
 
 # get all users
 @bp.get('/')
@@ -66,9 +67,9 @@ def login_user(json_data, database_table=UsersModel):
     user = database_table.query.filter_by(email=json_data.get('email')).first()
     # If user doesn't exist or password is wrong
     if not user or not user.check_password(json_data.get('password')):
-        logging.warning('Unsuccessful login attempt from user: '+json_data.get('email'))
+        logging_warning('Unsuccessful login attempt from user: '+json_data.get('email'))
         flask_abort(401, "Invalid User or Password!")
     
     token = user.generate_auth_token(600)
-    logging.info('User '+json_data.get('email') + ' logged in')
+    logging_info('User '+json_data.get('email') + ' logged in')
     return { 'token': token, 'duration': 600 }
