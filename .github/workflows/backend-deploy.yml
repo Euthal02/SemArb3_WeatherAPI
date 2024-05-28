@@ -66,7 +66,8 @@ jobs:
       - name: Build and push Docker image
         run: |
           cd backend/
-          docker build -t ghcr.io/euthal02/semarb3_weatherapi:latest -t ghcr.io/euthal02/semarb3_weatherapi:${{ steps.date.outputs.date }} -f Dockerfile.prod .
+          docker build -t ghcr.io/euthal02/semarb3_weatherapi:${{ steps.date.outputs.date }} -f Dockerfile.prod .
+          docker image tag ghcr.io/euthal02/semarb3_weatherapi:${{ steps.date.outputs.date }} ghcr.io/euthal02/semarb3_weatherapi:latest
           docker push ghcr.io/euthal02/semarb3_weatherapi:latest
 
   deploy-job:
