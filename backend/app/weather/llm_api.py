@@ -2,20 +2,22 @@ from openai import OpenAI
 from flask import current_app
 from apiflask import abort as flask_abort
 
-AI_INSTRUCTIONS = "Please address the user as Jane Doe. The user has a premium account."
+AI_INSTRUCTIONS = ""
 
-CLIENT = OpenAI(
-  organization=current_app.config['ORGANIZATION'],
-  project=current_app.config['PROJECT'],
-  api_key = current_app.config['API_KEY']
-)
+def send_message_to_llm(weather_data):
+  # connect to my openai account
+  client_object = OpenAI(
+    organization=current_app.config['ORGANIZATION'],
+    project=current_app.config['PROJECT'],
+    api_key = current_app.config['API_KEY']
+  )
 
-def send_message_to_llm(weather_data, client_object=CLIENT):
   # this is used to establish a connection with the assistant
   client_object.beta.assistants.retrieve(current_app.config['ASSISTANT_ID'])
   thread = client_object.beta.threads.create()
 
-  # send the user data, in our case the weather data, to openai, but do not yet make any changes.
+  # flask_abort(404, str(type(weather_data)))
+  # # send the user data, in our case the weather data, to openai, but do not yet make any changes.
   client_object.beta.threads.messages.create(
     thread_id=thread.id,
     role="user",
@@ -32,6 +34,6 @@ def send_message_to_llm(weather_data, client_object=CLIENT):
   # check if the status is completed, if not i will abort the flask request.
   if run.status == 'completed': 
     messages = client_object.beta.threads.messages.list(thread_id=thread.id)
-    return messages
+    return messages.data[0].content[0].text.value
   else:
     flask_abort(500, run.status)

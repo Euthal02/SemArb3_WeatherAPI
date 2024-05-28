@@ -10,7 +10,7 @@ RELAY_API_KEY = "ea0c217526b140ece2689be7d00653bb"
 
 def get_lat_and_lon_from_city_name(city_name, country=None):
     response = requests_get(f"{RELAY_API_URL}/geo/1.0/direct?q={city_name},{country}&limit=1&appid={RELAY_API_KEY}")
-    print(response.json())
+    #print(response.json())
     if response.json():
         return_lat = response.json()[0]["lat"]
         return_lon = response.json()[0]["lon"]

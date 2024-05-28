@@ -1,0 +1,42 @@
+{
+  "detail": {},
+  "message": "SyncCursorPage[Message](
+    data=[
+        Message(
+            id='msg_Uaf5FhUvF0HCsyTVv6tyJjEO', 
+            assistant_id='asst_AdqTcay6tPbTZi2IWKqxXdvD', 
+            attachments=[], 
+            completed_at=None, 
+            content=[
+                TextContentBlock(
+                    text=Text(
+                        annotations=[], 
+                        value='Heute liefert die Wetterfee uns ein unbeständiges Spektakel. Den späten Nachmittag bestreiten wir mit \"zerbrochenen Wolken\" in Rottweil, es wird eine angenehme 17 Grad warm, aber fühlen wird es sich an, als jage einem ein leicht leiserer Wind um die Ohren. Gehen Sie ruhig spazieren, aber erinnern Sie sich, die Wolken bleiben!\\n\\nGegen Abend nimmt das Wolkenorchester zu - von zerbrochen zu komplett überzogen. Mögen Sie graue Tapeten? Dann ist das Ihre Zeit! Das Thermometer rutscht gemächlich auf 11 Grad mit einem Gefühl von frischen 9 Grad herab, während wir uns heimlich Richtung Nacht bewegen.\\n\\nIn der Nacht, von ungefähr null bis zur frühen Morgendämmerung, spielen die Wolken \"Ganz oder gar nicht\" und füllen den gesamten Himmel, während die Temperaturen auf rund 10 Grad herumschaukeln. Es gibt also keine Sternschnuppen zu sehen, nur Wattewolken, meine Damen und Herren!\\n\\nAlso, liebe Rottweiler, schnappen Sie sich Ihr kuscheligstes Kissen und genießen Sie das sanfte Whoosh der Nachtwinde. Bis zum Morgen bleibt es unverändert \"ganz bedeckt\", also lange Schlafen erhält heute einen Daumen hoch vom Wetterbericht! Bleiben Sie trocken, behaglich und heiter, egal was der Wolken-Ozean uns zuruft!'
+                    ), 
+                    type='text'
+                )
+            ], 
+            created_at=1716907113, 
+            incomplete_at=None, 
+            incomplete_details=None, 
+            metadata={}, 
+            object='thread.message',
+            role='assistant', 
+            run_id='run_qDmTqgDYMmvP16isdO998ikL', 
+            status=None, 
+            thread_id='thread_g0ZFflClisqG0Hai3UFjLBzI'
+        ), 
+        Message(
+            id='msg_7MXhi42lsLZsTCq0FKKCahET', 
+            assistant_id=None, 
+            attachments=[], 
+            completed_at=None, 
+            content=[
+                TextContentBlock(
+                    text=Text(
+                        annotations=[], 
+                        value='{\"cod\": \"200\", \"message\": 0, \"cnt\": 6, \"list\": [{\"dt\": 1716908400, \"main\": {\"temp\": 17.12, \"feels_like\": 16.25, \"temp_min\": 16.44, \"temp_max\": 17.12, \"pressure\": 1019, \"sea_level\": 1019, \"grnd_level\": 938, \"humidity\": 52, \"temp_kf\": 0.68}, \"weather\": [{\"id\": 803, \"main\": \"Clouds\", \"description\": \"broken clouds\", \"icon\": \"04d\"}], \"clouds\": {\"all\": 82}, \"wind\": {\"speed\": 3.15, \"deg\": 310, \"gust\": 4.03}, \"visibility\": 10000, \"pop\": 0, \"sys\": {\"pod\": \"d\"}, \"dt_txt\": \"2024-05-28 15:00:00\"}, {\"dt\": 1716919200, \"main\": {\"temp\": 15.93, \"feels_like\": 15.17, \"temp_min\": 13.56, \"temp_max\": 15.93, \"pressure\": 1019, \"sea_level\": 1019, \"grnd_level\": 938, \"humidity\": 61, \"temp_kf\": 2.37}, \"weather\": [{\"id\": 803, \"main\": \"Clouds\", \"description\": \"broken clouds\", \"icon\": \"04d\"}], \"clouds\": {\"all\": 79}, \"wind\": {\"speed\": 1.62, \"deg\": 354, \"gust\": 1.52}, \"visibility\": 10000, \"pop\": 0, \"sys\": {\"pod\": \"d\"}, \"dt_txt\": \"2024-05-28 18:00:00\"}, {\"dt\": 1716930000, \"main\": {\"temp\": 11.89, \"feels_like\": 11.01, \"temp_min\": 9.28, \"temp_max\": 11.89, \"pressure\": 1019, \"sea_level\": 1019, \"grnd_level\": 938, \"humidity\": 72, \"temp_kf\": 2.61}, \"weather\": [{\"id\": 804, \"main\": \"Clouds\", \"description\": \"overcast clouds\", \"icon\": \"04n\"}], \"clouds\": {\"all\": 89}, \"wind\": {\"speed\": 1.34, \"deg\": 169, \"gust\": 1.31}, \"visibility\": 10000, \"pop\": 0, \"sys\": {\"pod\": \"n\"}, \"dt_txt\": \"2024-05-28 21:00:00\"}, {\"dt\": 1716940800, \"main\": {\"temp\": 10.45, \"feels_like\": 9.46, \"temp_min\": 10.45, \"temp_max\": 10.45, \"pressure\": 1019, \"sea_level\": 1019, \"grnd_level\": 937, \"humidity\": 73, \"temp_kf\": 0}, \"weather\": [{\"id\": 804, \"main\": \"Clouds\", \"description\": \"overcast clouds\", \"icon\": \"04n\"}], \"clouds\": {\"all\": 97}, \"wind\": {\"speed\": 1.9, \"deg\": 177, \"gust\": 1.92}, \"visibility\": 10000, \"pop\": 0, \"sys\": {\"pod\": \"n\"}, \"dt_txt\": \"2024-05-29 00:00:00\"}, {\"dt\": 1716951600, \"main\": {\"temp\": 10.41, \"feels_like\": 9.41, \"temp_min\": 10.41, \"temp_max\": 10.41, \"pressure\": 1017, \"sea_level\": 1017, \"grnd_level\": 936, \"humidity\": 73, \"temp_kf\": 0}, \"weather\": [{\"id\": 804, \"main\": \"Clouds\", \"description\": \"overcast clouds\", \"icon\": \"04n\"}], \"clouds\": {\"all\": 100}, \"wind\": {\"speed\": 1.95, \"deg\": 189, \"gust\": 2.26}, \"visibility\": 10000, \"pop\": 0, \"sys\": {\"pod\": \"n\"}, \"dt_txt\": \"2024-05-29 03:00:00\"}, {\"dt\": 1716962400, \"main\": {\"temp\": 11.18, \"feels_like\": 10.44, \"temp_min\": 11.18, \"temp_max\": 11.18, \"pressure\": 1016, \"sea_level\": 1016, \"grnd_level\": 935, \"humidity\": 80, \"temp_kf\": 0}, \"weather\": [{\"id\": 804, \"main\": \"Clouds\", \"description\": \"overcast clouds\", \"icon\": \"04d\"}], \"clouds\": {\"all\": 100}, \"wind\": {\"speed\": 2.1, \"deg\": 194, \"gust\": 3.53}, \"visibility\": 10000, \"pop\": 0, \"sys\": {\"pod\": \"d\"}, \"dt_txt\": \"2024-05-29 06:00:00\"}], \"city\": {\"id\": 2843636, \"name\": \"Rottweil\", \"coord\": {\"lat\": 48.1655, \"lon\": 8.6251}, \"country\": \"DE\", \"population\": 25510, \"timezone\": 7200, \"sunrise\": 1716867145, \"sunset\": 1716923614}}'
+                    ), 
+                    type='text'
+                )], created_at=1716907112, incomplete_at=None, incomplete_details=None, metadata={}, object='thread.message', role='user', run_id=None, status=None, thread_id='thread_g0ZFflClisqG0Hai3UFjLBzI')], object='list', first_id='msg_Uaf5FhUvF0HCsyTVv6tyJjEO', last_id='msg_7MXhi42lsLZsTCq0FKKCahET', has_more=False)"
+}

@@ -1,7 +1,9 @@
 from app.weather import bp 
-from backend.app.weather.weather_api import get_lat_and_lon_from_city_name, make_relay_api_call_based_on_lat_and_lon
+from app.weather.weather_api import get_lat_and_lon_from_city_name, make_relay_api_call_based_on_lat_and_lon
+from app.weather.llm_api import send_message_to_llm
 from app.auth import token_auth
 from app.models.weather import LocationIn, WeatherOut
+from json import dumps as json_dumps
 #import logging
 
 # get weather info
@@ -18,7 +20,8 @@ def weather_data_from_cityname_and_countrycode(query_data):
 
     # second, we have to create a funny forecast from it.
     # ToDo: create funny forecast
-    funny_forecast = raw_forecast_data
+    forecast_as_string = json_dumps(raw_forecast_data)
+    funny_forecast = send_message_to_llm(forecast_as_string)
 
     # and finally return it.
     return funny_forecast
