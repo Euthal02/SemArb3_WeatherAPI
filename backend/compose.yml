@@ -9,19 +9,8 @@ services:
     volumes:
       - .:/app
       - monitoring-dashboard:/var/tmp
-    environment:
-      - DATABASE_URI=mysql+mysqlconnector://root:root@semarb3_db_dev:3306/semarb3_db
-      - CHOKIDAR_USEPOLLING=true
-      - SECRET_KEY=hallomarco!8844
-      - FLASK_DEBUG=1
-      - FLASK_HOST=0.0.0.0
-      - FLASK_PORT=5000
-      - FLASK_APP=app
-      - DASHBOARD_ENABLED=True
-      - ORGANIZATION = 'org-Vx2q9NIHeJrNCqNTIOZ5C576'
-      - PROJECT = 'proj_cdIcvrykTAvgjfS3k3eJSbjX'
-      - API_KEY = 'sk-api-user-NuXmGbmdrn02jpyAfptYT3BlbkFJRuPf7ZUuvd8r6NBGmwVi'
-      - ASSISTANT_ID = 'asst_AdqTcay6tPbTZi2IWKqxXdvD'
+    env_file:
+      - path: .env
     depends_on:
       semarb3_db_dev: 
         condition: service_healthy
@@ -30,9 +19,8 @@ services:
     image: mysql:5.7
     container_name: semarb3_db_dev
     restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: semarb3_db
+    env_file:
+      - path: .env
     ports:
       - 3306:3306
     volumes:
