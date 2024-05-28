@@ -2,6 +2,7 @@ version: '3.9'
 services:
   semarb3_flask_dev:
     container_name: semarb3_flask_dev
+    restart: no
     build:
       context: .
     ports:
@@ -18,7 +19,7 @@ services:
   semarb3_db_dev:
     image: mysql:5.7
     container_name: semarb3_db_dev
-    restart: unless-stopped
+    restart: no
     env_file:
       - path: .env
     ports:
