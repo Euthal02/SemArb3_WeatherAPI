@@ -2,6 +2,7 @@ version: '3.9'
 services:
   semarb3_flask_prod:
     image: ghcr.io/euthal02/semarb3_weatherapi:latest
+    restart: always
     container_name: semarb3_flask_prod
     env_file:
       - path: .env
@@ -16,7 +17,7 @@ services:
   semarb3_db_prod:
     image: mysql:5.7
     container_name: semarb3_db_prod
-    restart: unless-stopped
+    restart: always
     env_file:
       - path: .env
     healthcheck:

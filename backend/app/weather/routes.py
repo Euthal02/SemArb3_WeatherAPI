@@ -10,7 +10,7 @@ from json import dumps as json_dumps
 @bp.get('/lookup')
 @bp.auth_required(token_auth)
 @bp.input(LocationIn, location='query')
-#@bp.output(WeatherOut)
+@bp.output(WeatherOut)
 def weather_data_from_cityname_and_countrycode(query_data):
     # first, get the forecast data
     city_name = query_data['city_name']
@@ -24,4 +24,4 @@ def weather_data_from_cityname_and_countrycode(query_data):
     funny_forecast = send_message_to_llm(forecast_as_string)
 
     # and finally return it.
-    return funny_forecast
+    return {"city_name": city_name, "country_code":country_code, "message": funny_forecast}
