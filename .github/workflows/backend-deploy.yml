@@ -58,7 +58,7 @@ jobs:
   
       - name: Build and push Docker image
         run: |
-          docker build -t ghcr.io/euthal02/semarb3_weatherapi:latest backend/Dockerfile.prod
+          docker build -t ghcr.io/euthal02/semarb3_weatherapi:latest -f backend/Dockerfile.prod
           docker push ghcr.io/euthal02/semarb3_weatherapi:latest
 
   deploy-job:
