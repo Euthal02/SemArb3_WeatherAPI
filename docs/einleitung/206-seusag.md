@@ -7,4 +7,4 @@ nav_order: 206
 
 # 2.6 Seusag
 
-Test
+![SEUSAG](../ressources/diagrams/weatherapi.png)
