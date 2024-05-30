@@ -9,15 +9,13 @@ nav_order: 401
 
 Hier sind die Erkenntnisse des ersten Sprintmeetings.
 
+![Star](../ressources/icons/star.png){: width="250px" }
+
 ## Was ist gut gelaufen? Was konnte bereits erreicht werden?
 
 ## Marco
 
 Ich konnte bereits einiges umsetzen und konnte das Grundgerüst meiner API bereits erstellen. Auch der Github Workflow funktioniert bereits wunderbar. Das deployen auf die AWS Umgebung läuft und kostet mich auch nichts. Leider musste ich für die Anbindung an OpenAI 20 Franken bezahlen, dies ist jedoch für mich in Ordnung.
-
-## Dennis
-
-Rückblicken auf den ersten Sprint kann ich sagen, dass ich im Zeitplan liege. Ich habe mich ins JavaScript Framework Vue eingelesen und einige Tutorials dazu angesehen. Ich habe mich für Vue entschieden, da wir das Framework bei Boris im Unterricht ebenfalls verwenden. Ausserdem bin ich sehr daran interessiert eine SPA (SinglePage Application) zu erstellen.
 
 ## Dennis
 
@@ -31,19 +29,26 @@ Da wir dieses Mal zum ersten Mal in einer Gruppe arbeiten, haben wir direkt beme
 
 Wir möchten uns gerne mehr virtuell treffen, da wir uns direkt miteinander besprechen können. Momentan haben wir noch einige Punkte, bei welchen wir keine gemeinsame Übereinkunft haben. Die könnten wir mit einer Aussprache direkt lösen.
 
+Generell möchten wir uns gegenseitig mehr abstimmen um besser zusammen arbeiten zu können.
+
 ## Erledigte Tasks des letzten Sprints?
 
-Beim letzten Sprint haben wir uns vor allem auf das Projekmanagement fokussiert. Wir möchten unser Projekt so gut wie möglich ausarbeiten, und die Gruppenarbeit ist noch ziemlich neu für uns.
+Beim letzten Sprint haben wir uns vor allem auf das Projekmanagement fokussiert. Wir möchten unser Projekt so gut wie möglich ausarbeiten, und die Gruppenarbeit ist noch ziemlich neu für uns. Wir haben noch einige Tasks offen, jedoch ist dieser Sprintabschluss eigentlich auch noch zu früh.
 
 ## Momentaufnahme Backlog / Projektstatus
 
 ![Backlog Sprint 1](../ressources/images/scrum/backlog_sprint1.PNG)
 
+![Projektstatus Sprint 1](../ressources/images/scrum/projektstatus_sprint1.PNG)
+
 ## Warum ist der kommende Sprint wichtig?
 
+Im kommenden Sprint möchten wir so richtig mit der fachlichen Umsetzung unserer Arbeit beginnen. Wir können entlich das mühsame Projektmanagement hinter uns lassen und mit der Arbeit beginnen.
+
 ## Was müssen wir tun, um das Sprintziel zu erreichen?
+
+Wenn wir uns besser abstimmen können und miteinander arbeiten können, haben wir bereits einen grossen Schritt gemacht, um besser ins Ziel zu kommen.
 
 ## Wie wird die daraus resultierende Arbeit im kommenden Sprint erledigt?
 
 ## Konkrete Tasks für den nächsten Sprint?
-

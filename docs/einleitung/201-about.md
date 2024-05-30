@@ -16,4 +16,4 @@ Für die 3. Semesterarbeit haben wir uns überlegt, eine Wetter-App zu entwickel
 Dies ist unsere erste Semesterarbeit, die wir als Gruppe/Team durchführen. Wir wollten uns einer weiteren Herausforderung stellen und ein Projekt realitätsnah umsetzen.
 Damit die Bewertung auch Seperiert durchgeführt werden kann, wird Marco eine Dokumentation über das Backend machen und Dennis über das Frontend.
 
-[Einreichungsformular](../../../ITCNE23_Semesterarbeit_3_Einreichungsformular.pdf)
+[Einreichungsformular](../ITCNE23_Semesterarbeit_3_Einreichungsformular.pdf)

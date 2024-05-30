@@ -13,7 +13,7 @@ Damit die Semesterarbeit gewertet werden kann, müssen Ziele definiert und errei
 
 [Quelle Bild - Icons](../anhang/quellen.html#54-icons)
 
-### Am Ende der Semesterarbeit sollen folgende Ziele erreicht werden.
+## Am Ende der Semesterarbeit sollen folgende Ziele erreicht werden.
 
 (Aus dem Einreichungsformular)
 
