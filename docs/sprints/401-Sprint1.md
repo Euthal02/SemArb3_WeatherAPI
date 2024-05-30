@@ -19,13 +19,25 @@ Ich konnte bereits einiges umsetzen und konnte das Grundgerüst meiner API berei
 
 Rückblicken auf den ersten Sprint kann ich sagen, dass ich im Zeitplan liege. Ich habe mich ins JavaScript Framework Vue eingelesen und einige Tutorials dazu angesehen. Ich habe mich für Vue entschieden, da wir das Framework bei Boris im Unterricht ebenfalls verwenden. Ausserdem bin ich sehr daran interessiert eine SPA (SinglePage Application) zu erstellen.
 
+## Dennis
+
+Rückblicken auf den ersten Sprint kann ich sagen, dass ich im Zeitplan liege. Ich habe mich ins JavaScript Framework Vue eingelesen und einige Tutorials dazu angesehen. Ich habe mich für Vue entschieden, da wir das Framework bei Boris im Unterricht ebenfalls verwenden. Ausserdem bin ich sehr daran interessiert eine SPA (SinglePage Application) zu erstellen.
+
 ## Was hat nicht funktioniert? Was war nicht gut? Welche Aspekte sollen entfallen?
+
+Da wir dieses Mal zum ersten Mal in einer Gruppe arbeiten, haben wir direkt bemerkt, dass wir einige Probleme hatten einen Zeitpunkt für unsere Meetings zu vereinbaren. Beide von uns haben einen sehr dichten Zeitplan und da sich diese nur selten überschneiden, haben wir nur wenig Zeit. Wir möchten dem entgegenwirken und haben nun bis Ende Semester bereits Termine vereinbart, welche wir beide uns freihalten werden.
 
 ## Was soll aufgrund der gemachten Erfahrungen ausprobiert werden?
 
+Wir möchten uns gerne mehr virtuell treffen, da wir uns direkt miteinander besprechen können. Momentan haben wir noch einige Punkte, bei welchen wir keine gemeinsame Übereinkunft haben. Die könnten wir mit einer Aussprache direkt lösen.
+
 ## Erledigte Tasks des letzten Sprints?
 
+Beim letzten Sprint haben wir uns vor allem auf das Projekmanagement fokussiert. Wir möchten unser Projekt so gut wie möglich ausarbeiten, und die Gruppenarbeit ist noch ziemlich neu für uns.
+
 ## Momentaufnahme Backlog / Projektstatus
+
+![Backlog Sprint 1](../ressources/images/scrum/backlog_sprint1.PNG)
 
 ## Warum ist der kommende Sprint wichtig?
 
