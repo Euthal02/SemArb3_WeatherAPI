@@ -15,6 +15,10 @@ Hier sind die Erkenntnisse des ersten Sprintmeetings.
 
 Ich konnte bereits einiges umsetzen und konnte das Grundgerüst meiner API bereits erstellen. Auch der Github Workflow funktioniert bereits wunderbar. Das deployen auf die AWS Umgebung läuft und kostet mich auch nichts. Leider musste ich für die Anbindung an OpenAI 20 Franken bezahlen, dies ist jedoch für mich in Ordnung.
 
+## Dennis
+
+Rückblicken auf den ersten Sprint kann ich sagen, dass ich im Zeitplan liege. Ich habe mich ins JavaScript Framework Vue eingelesen und einige Tutorials dazu angesehen. Ich habe mich für Vue entschieden, da wir das Framework bei Boris im Unterricht ebenfalls verwenden. Ausserdem bin ich sehr daran interessiert eine SPA (SinglePage Application) zu erstellen.
+
 ## Was hat nicht funktioniert? Was war nicht gut? Welche Aspekte sollen entfallen?
 
 ## Was soll aufgrund der gemachten Erfahrungen ausprobiert werden?
