@@ -7,7 +7,6 @@ services:
     container_name: semarb3_frontend_prod
     volumes:
       - ./app:/app
-      - ./nginx/default.conf:/etc/nginx/default.conf
       - /app/node_modules
     ports:
       - 80:80
