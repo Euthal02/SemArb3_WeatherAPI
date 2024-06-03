@@ -1,0 +1,24 @@
+#Base image
+FROM node:lts-alpine3.17 as builder
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the package.json
+COPY ./app/package.json /app/package.json
+
+# install project dependencies
+RUN npm install
+
+COPY ./app/ /app
+RUN npm run build
+
+# production env
+FROM nginx:1.23.3-alpine-slim
+
+COPY --from=builder ./app/dist /usr/share/nginx/html
+COPY ./nginx/default.conf /etc/nginx/
+
+EXPOSE 80
+
+CMD [ "nginx", "-g", "daemon off;" ]

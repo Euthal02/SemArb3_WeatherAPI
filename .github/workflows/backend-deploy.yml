@@ -41,6 +41,7 @@ jobs:
 
   build-job:
     runs-on: ubuntu-latest
+    environment: backend_env_vars
     needs: test-job
     permissions:
       contents: read

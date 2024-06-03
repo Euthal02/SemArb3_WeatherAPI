@@ -17,62 +17,78 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test-job:
+  # test-job:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v2
+      
+  #     - name: Set up Python
+  #       uses: actions/setup-python@v2
+  #       with:
+  #         python-version: 3.12.2
+      
+  #     - name: Install dependencies
+  #       run: |
+  #         pip install -r backend/requirements.txt
+  #         pip install pytest
+      
+  #     - name: Run unit tests
+  #       run: |
+  #         echo "Running unit tests... This will take about 60 seconds."
+  #         python -m pytest
+
+  build-job:
     runs-on: ubuntu-latest
+    environment: frontend_env_vars
+    # needs: test-job
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
       
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Login to GitHub Container registry
+        uses: docker/login-action@v1
+        env:
+          GITHUB_USER: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          python-version: 3.12.2
-      
-#       - name: Install dependencies
-#         run: |
-#           pip install -r backend/requirements.txt
-#           pip install pytest
-      
-#       - name: Run unit tests
-#         run: |
-#           echo "Running unit tests... This will take about 60 seconds."
-#           python -m pytest
+          registry: ghcr.io
+          username: $GITHUB_USER
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-#   build-job:
-#     runs-on: ubuntu-latest
-#     needs: test-job
-#     steps:
-#       - name: Checkout repository
-#         uses: actions/checkout@v2
+      - name: Build and push Docker image
+        run: |
+          cd frontend/
+          docker build -t ghcr.io/euthal02/semarb3_frontend:latest -f Dockerfile.prod .
+          docker push ghcr.io/euthal02/semarb3_frontend:latest
+
+  deploy-job:
+    runs-on: ubuntu-latest
+    environment: frontend_env_vars
+    needs: build-job
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       
-#       - name: Login to GitHub Container Registry
-#         run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+      - name: Install SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+        shell: bash
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
-#       - name: Build and push Docker image
-#         run: |
-#           docker build -t ghcr.io/euthal02/semarb3_weatherapi:latest backend/.
-#           docker push ghcr.io/euthal02/semarb3_weatherapi:latest
+      - name: Copy files to Server
+        run: |
+          scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q frontend/compose.prod.yaml ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/compose.yaml
 
-#   deploy-job:
-#     runs-on: ubuntu-latest
-#     needs: build-job
-#     steps:
-#       - name: Checkout repository
-#         uses: actions/checkout@v2
-      
-#       - name: Install SSH key
-#         run: |
-#           mkdir -p ~/.ssh
-#           echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-#           chmod 600 ~/.ssh/id_rsa
-#         shell: bash
-#         env:
-#           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-
-#       - name: Deploy to server
-#         run: |
-#           scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q backend/compose.prod.yaml ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/compose.yaml
-#           ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }} "cd /home/${{ vars.DEPLOY_USER }}; 
-#           echo "${{ secrets.DOCKER_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-#           docker-compose pull;
-#           docker-compose up -d"
+      - name: Deploy on server
+        run: |
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }} "cd /home/${{ vars.DEPLOY_USER }};
+          docker-compose pull;
+          docker-compose up -d;
+          docker image prune -f"

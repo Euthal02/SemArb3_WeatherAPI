@@ -9,3 +9,5 @@ nav_order: 310
 # 3.1.2 Infrastruktur
 
 Todo
+
+ec2 instanz erklären
