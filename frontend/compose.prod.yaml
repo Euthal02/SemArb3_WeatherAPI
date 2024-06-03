@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   semarb3_frontend_prod:
-    image: ghcr.io/euthal02/semarb3_weatherapi:latest
+    image: ghcr.io/euthal02/semarb3_frontend:latest
     restart: always
     container_name: semarb3_frontend_prod
     build:
