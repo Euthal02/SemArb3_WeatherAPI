@@ -5,11 +5,9 @@ services:
     image: ghcr.io/euthal02/semarb3_frontend:latest
     restart: always
     container_name: semarb3_frontend_prod
-    build:
-      context: .
-      dockerfile: 'Dockerfile.prod'
     volumes:
       - ./app:/app
+      - ./nginx/default.conf:/etc/nginx/default.conf
       - /app/node_modules
     ports:
       - 80:80
