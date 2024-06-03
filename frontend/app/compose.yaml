@@ -4,13 +4,17 @@ services:
   semarb3_frontend_dev:
     build:
       context: .
-      dockerfile: 'Dockerfile'
-    ports:
-      - 5173:5173
+      dockerfile: Dockerfile
     volumes:
       - ./app:/app
       - /app/node_modules
-    container_name: semarb3_frontend_dev
     environment:
       - CHOKIDAR_USEPOLLING=true
+    
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - /nginx/default.conf /etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80
 
