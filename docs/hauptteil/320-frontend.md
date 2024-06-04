@@ -2,6 +2,7 @@
 layout: default
 title: 3.2 Frontend
 parent: 3. Hauptteil
+has_children: true
 nav_order: 320
 ---
 
