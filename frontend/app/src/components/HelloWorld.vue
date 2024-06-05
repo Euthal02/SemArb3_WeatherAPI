@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      Bitte klicken Sie hier um ihre persönliche Wetterprognose zu erhalten Test.<br>
+    <p>Bitte klicken Sie hier um ihre persönliche Wetterprognose zu erhalten Test.<br>
       <button @click="Callbackend()">Wetterdaten berechnen</button><br>
       {{outputElement.textContent}}
     </p>
