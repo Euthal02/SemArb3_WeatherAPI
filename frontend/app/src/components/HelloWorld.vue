@@ -3,18 +3,28 @@
     <h1>{{ msg }}</h1>
     <p>
       Bitte klicken Sie hier um ihre persönliche Wetterprognose zu erhalten.<br>
-      <button>Wetterdaten berechnen</button>
+      <button @click="getLocation()">Wetterdaten berechnen</button><br>
+      {{ lat }} , {{ lng }}
     </p>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+<script setup>
+
+import {ref} from 'vue'
+
+const lat = ref(0)
+const lng = ref(0)
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      lat.value = position.coords.latitude
+      lng.value = position.coords.longitude
+    })
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
