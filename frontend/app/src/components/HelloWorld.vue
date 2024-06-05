@@ -3,11 +3,11 @@
     <h1>{{ msg }}</h1>
     <p>
       Bitte klicken Sie hier um ihre persönliche Wetterprognose zu erhalten.<br>
-      <button @click="getLocation()">Wetterdaten berechnen</button><br>
-      {{ lat }} , {{ lng }}
+      <button @click="">Wetterdaten berechnen</button>
     </p>
   </div>
 </template>
+
 
 <script setup>
 
@@ -25,6 +25,16 @@ function getLocation() {
   }
 }
 
+</script>
+
+
+<script>
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
