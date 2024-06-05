@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      Bitte klicken Sie hier um ihre persönliche Wetterprognose zu erhalten.<br>
+      Bitte klicken Sie hier um ihre persönliche Wetterprognose zu erhalten Test.<br>
       <button @click="getLocation()">Wetterdaten berechnen</button><br>
       {{ lat }} , {{ lng }}
     </p>
