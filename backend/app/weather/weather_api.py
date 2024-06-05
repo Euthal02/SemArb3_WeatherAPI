@@ -8,13 +8,13 @@ from apiflask import abort as flask_abort
 RELAY_API_URL = "http://api.openweathermap.org"
 RELAY_API_KEY = "ea0c217526b140ece2689be7d00653bb"
 
-def get_lat_and_lon_from_city_name(city_name, country=None):
-    response = requests_get(f"{RELAY_API_URL}/geo/1.0/direct?q={city_name},{country}&limit=1&appid={RELAY_API_KEY}")
-    #print(response.json())
+def get_city_name_from_lat_and_lon(lattitude, longitude):
+    response = requests_get(f"{RELAY_API_URL}/geo/1.0/reverse?lat={lattitude}&lon={longitude}&limit=1&appid={RELAY_API_KEY}")
+    print(response.json())
     if response.json():
-        return_lat = response.json()[0]["lat"]
-        return_lon = response.json()[0]["lon"]
-        return return_lat, return_lon
+        city_name = response.json()[0]["name"]
+        country = response.json()[0]["country"]
+        return city_name, country
     else:
         flask_abort(404, "This city could not be found!")
 
