@@ -85,7 +85,7 @@ jobs:
       - name: Copy files to Server
         run: |
           scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q frontend/compose.prod.yaml ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/compose.yaml
-          scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q frontend/proxy/prod.conf ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/proxy.conf
+          scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q frontend/nginx_config/proxy/prod.conf ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }}:/home/${{ vars.DEPLOY_USER }}/proxy.conf
       - name: Deploy on server
         run: |
           ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${{ vars.DEPLOY_USER }}@${{ vars.DEPLOY_HOST }} "cd /home/${{ vars.DEPLOY_USER }};
