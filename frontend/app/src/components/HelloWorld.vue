@@ -3,8 +3,8 @@
     <h1>{{ msg }}</h1>
     <p>
       Bitte klicken Sie hier um ihre persönliche Wetterprognose zu erhalten Test.<br>
-      <button @click="getLocation()">Wetterdaten berechnen</button><br>
-      {{ lat }} , {{ lng }}
+      <button @click="Callbackend()">Wetterdaten berechnen</button><br>
+      {{outputElement.textContent}}
     </p>
   </div>
 </template>
@@ -33,6 +33,30 @@ function getLocation() {
     })
   }
 }
+
+function Callbackend(){
+  // get location of user
+  getLocation()
+
+  // Define the API URL
+  const apiUrl = 'http://ec2-44-194-144-99.compute-1.amazonaws.com:5000/weather/lookup?lattitude=' + lat + '&longitude=' + lng;
+  const outputElement = document.getElementById('output');
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Display data in an HTML element
+      outputElement.textContent = JSON.stringify(data, null, 2);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  }
 
 </script>
 
