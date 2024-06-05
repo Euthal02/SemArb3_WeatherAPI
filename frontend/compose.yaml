@@ -4,18 +4,20 @@ networks:
   frontend_net:
 
 services:
-  semarb3_frontend_prod:
+  semarb3_frontend:
     build:
         dockerfile: 'Dockerfile'
     restart: always
-    container_name: semarb3_frontend_prod
+    container_name: semarb3_frontend
     volumes:
       - ./app:/app
     networks:
-      - frontend_net
+      frontend_net:
+          aliases:
+            - semarb3_frontend
 
-  frontend_proxy_prod:
-    container_name: frontend_proxy_prod
+  frontend_proxy:
+    container_name: frontend_proxy
     restart: always
     image: nginx:1.13.7
     ports:
