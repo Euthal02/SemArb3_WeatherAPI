@@ -1,32 +1,12 @@
 version: '3.9'
 
-networks:
-  frontend_net:
-
 services:
-  semarb3_frontend:
+  semarb3_frontend_dev:
     build:
-        dockerfile: 'Dockerfile'
-    restart: always
-    container_name: semarb3_frontend
+      dockerfile: Dockerfile
     volumes:
       - ./app:/app
-    networks:
-      frontend_net:
-          aliases:
-            - semarb3_frontend
-
-  frontend_proxy:
-    container_name: frontend_proxy
-    restart: always
-    image: nginx:latest
     ports:
       - 80:80
-    volumes:
-      - nginx_secrets:/etc/letsencrypt
-      - ./nginx_config/proxy/dev.conf:/etc/nginx/conf.d/default.conf
-    networks:
-      - frontend_net
-
-volumes:
-  nginx_secrets:
+    environment:
+      - CHOKIDAR_USEPOLLING=true
