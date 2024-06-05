@@ -32,6 +32,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b9b7;
+  color: #CEDDEF;
 }
 </style>
