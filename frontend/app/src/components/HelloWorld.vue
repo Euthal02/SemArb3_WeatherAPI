@@ -3,7 +3,8 @@
     <h1>{{ msg }}</h1>
     <p>
       Bitte klicken Sie hier um ihre persönliche Wetterprognose zu erhalten.<br>
-      <button @click="">Wetterdaten berechnen</button>
+      <button @click="getLocation()">Wetterdaten berechnen</button><br>
+      {{ lat }} , {{ lng }}
     </p>
   </div>
 </template>
