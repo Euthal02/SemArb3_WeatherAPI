@@ -1,18 +1,27 @@
 version: '3.9'
 
+networks:
+  frontend_net:
+
 services:
   semarb3_frontend_prod:
     image: ghcr.io/euthal02/semarb3_frontend:latest
     restart: always
     container_name: semarb3_frontend_prod
-    volumes:
-      - ./app:/app
-      - /app/node_modules
-      - ./certbot/www/:/var/www/certbot/:ro
+    networks:
+      - frontend_net
+
+  frontend_proxy_prod:
+    container_name: frontend_proxy_prod
+    restart: always
+    image: jonasal/nginx-certbot:latest
     ports:
       - 80:80
-  frontend_certbot:
-    image: certbot/certbot
+      - 443:443
+    environment:
+      - CERTBOT_EMAIL=info@meuthak.ch
     volumes:
-      - ./certbot/www/:/var/www/certbot/:rw
-      - ./certbot/conf/:/etc/letsencrypt/:rw
+      - nginx_secrets:/etc/letsencrypt
+      - ./proxy.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - frontend_net
