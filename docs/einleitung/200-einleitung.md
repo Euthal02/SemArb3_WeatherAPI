@@ -19,7 +19,7 @@ Dazu gehört unter anderem:
 - Zeitplan
 - Projektmethode
 - SEUSAG
-- Scrum Meeting
+- Sprints
 
 ![Einleitung](../ressources/icons/training.png){: width="250px" }
 

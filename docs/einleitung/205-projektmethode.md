@@ -16,6 +16,7 @@ Durch Kanban-Boards wird der aktuelle Stand der Arbeit deutlich sichtbar, was da
 ![Kanban Board](../ressources/icons/kanban.png){: width="250px" }
 
 [Quelle Bild - Icons](../anhang/quellen.html#54-icons)
+
 ## Scrum
 
 Scrum ist ein Rahmenwerk für ein spezifisches Projektmanagementverfahren, das sich durch effiziente Prozesse, inkrementelle Entwicklung und regelmäßige Feedbackschleifen auszeichnet. Ursprünglich für die Softwareentwicklung konzipiert, wird Scrum mittlerweile in verschiedenen Branchen erfolgreich eingesetzt.
@@ -26,7 +27,6 @@ Im Mittelpunkt von Scrum steht ein iterativer Ansatz, der sich auf inkrementelle
 
 [Quelle Bild - Icons](../anhang/quellen.html#54-icons)
 
-
 ## Kanban und Scrum in unserer Semesterarbeit
 
 Während unserer Semesterarbeit werden wir mit den Projektmanagement-Methoden Kanban und Scrum arbeiten. Kanban ist bereits in GitHub integriert, wo man Boards und Tasks selbst erstellen kann. So haben wir in Form von "Issues" unsere Aufgaben aufgelistet, die erledigt werden müssen. Mit Kanban können wir sehr effizient arbeiten und unsere Fortschritte kontinuierlich verfolgen. Durch die verschiedenen Status sehen wir, wer gerade an welchen Themen arbeitet oder welche bereits abgeschlossen sind.
@@ -36,5 +36,3 @@ In GitHub-Projekten können verschiedene Ansichten für Kanban erstellt werden. 
 Hier findet man den Link zu meinem Projektmanagement:
 
 [3 Semesterarbeit - WeatherAPI](https://github.com/users/Euthal02/projects/4/views/2)
-
-## Scrum Meeetings

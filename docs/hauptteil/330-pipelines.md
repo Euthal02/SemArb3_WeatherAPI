@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 3.0.1 Pipelines
+title: 3.3 Pipelines
 parent: 3. Hauptteil
-nav_order: 301
+nav_order: 330
 ---
 
-# 3.0.1 Pipelines
+# 3.3 Pipelines
 
 Wir arbeiten in dieser Arbeit mit Github Workflows. Diese werden wir in diesem Abschnitt besser beleuchten.

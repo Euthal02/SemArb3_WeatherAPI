@@ -11,8 +11,7 @@ Damit wir durch die Semesterarbeit einen Leitfaden habe und die Arbeit vorantrei
 
 Das ist der grobe Zeitplan
 
-
-|**Datum**           | **Aktivität** |                                             
+|**Datum**           | **Aktivität** |
 | ------------------- | ----------------------------------------------------------|
 | 06.05.2024 - 10.05.2024 | Abgabe und Besprechung Einreichungsformular Semesterarbeit |
 | 26.05.2024           | Basic App and API funktioniert (Kommunikation zwischen Client und Server funktioniert)|

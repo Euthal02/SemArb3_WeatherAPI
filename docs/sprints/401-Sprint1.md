@@ -49,8 +49,8 @@ Im kommenden Sprint möchten wir so richtig mit der fachlichen Umsetzung unserer
 
 Wenn wir uns besser abstimmen können und miteinander arbeiten können, haben wir bereits einen grossen Schritt gemacht, um besser ins Ziel zu kommen.
 
-## Blick auf den 2.Sprint
+## Blick auf den 2. Sprint
 
-Da unserer Vorbereitungsarbeiten uns gut gelungen sind, können wir uns auf den Fachlichen teil konzentrieren. Wie man von den Meilensteinen entnehmen kann, besteht der 2.Sprint nur Technischer arbeite, auf welche wir uns freuen.
+Da unserer Vorbereitungsarbeiten uns gut gelungen sind, können wir uns auf den fachlichen Teil konzentrieren. Wie man von den Meilensteinen entnehmen kann, besteht der 2. Sprint nur aus technischen Arbeiten, auf welche wir uns freuen.
 
 ![Preview Print 2](../ressources/images/scrum/preview_projektstatus_sprint2.PNG)
