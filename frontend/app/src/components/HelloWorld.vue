@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <p>Bitte klicken Sie hier um ihre persönliche Wetterprognose zu erhalten Test.<br>
       <button @click="Callbackend()">Wetterdaten berechnen</button><br>
-      {{outputElement.textContent}}
+      {{ lat }} , {{ lng }} , {{ outputElement }}
     </p>
   </div>
 </template>
@@ -38,7 +38,7 @@ function Callbackend(){
   getLocation()
 
   // Define the API URL
-  const apiUrl = 'http://ec2-44-194-144-99.compute-1.amazonaws.com:5000/weather/lookup?lattitude=' + lat + '&longitude=' + lng;
+  const apiUrl = `http://ec2-44-194-144-99.compute-1.amazonaws.com:5000/weather/lookup?lattitude=${lat.value}&longitude=${lng.value}`
   const outputElement = document.getElementById('output');
 
   fetch(apiUrl)
