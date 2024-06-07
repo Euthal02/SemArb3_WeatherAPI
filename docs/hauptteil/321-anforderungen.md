@@ -21,4 +21,5 @@ Unsere Anforderungen an das Frontend wurden relativ schnell klar, da wir es schl
 
 
 So sieht unsere Skizze aus
+
 ![Anforderungen](../ressources/diagrams/Skizze_Webseite.png){: width="500x" }
