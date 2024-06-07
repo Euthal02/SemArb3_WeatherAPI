@@ -38,7 +38,8 @@ async function fetchWeather() {
 
   try {
     getLocation()
-    const apiUrl = `http://localhost:8010/weather/lookup?lattitude=${lat.value}&longitude=${lng.value}`
+    const apiUrl = `http://ec2-44-194-144-99.compute-1.amazonaws.com:5000/weather/lookup?lattitude=${lat.value}&longitude=${lng.value}`
+
     const response = await fetch(apiUrl, {
         method: 'GET',
         headers: {
