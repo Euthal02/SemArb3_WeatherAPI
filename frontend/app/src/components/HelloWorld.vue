@@ -2,8 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>Bitte klicken Sie hier um ihre persönliche Wetterprognose zu erhalten Test.<br>
-      <button @click="Callbackend()">Wetterdaten berechnen</button><br>
-      {{ lat }} , {{ lng }} , {{ outputElement }}
+      <button @click="async() => await fetchWeather()">Wetterdaten berechnen</button><br>
+      {{ lat }} , {{ lng }} , <span id="weatherOutput"></span>
     </p>
   </div>
 </template>
@@ -33,29 +33,31 @@ function getLocation() {
   }
 }
 
-function Callbackend(){
-  // get location of user
-  getLocation()
+async function fetchWeather() {
+  const outputElement = document.getElementById('weatherOutput');
 
-  // Define the API URL
-  const apiUrl = `http://ec2-44-194-144-99.compute-1.amazonaws.com:5000/weather/lookup?lattitude=${lat.value}&longitude=${lng.value}`
-  const outputElement = document.getElementById('output');
-
-  fetch(apiUrl)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      // Display data in an HTML element
-      outputElement.textContent = JSON.stringify(data, null, 2);
-    })
-    .catch(error => {
-      console.error('Error:', error);
+  try {
+    getLocation()
+    const apiUrl = `http://localhost:8010/weather/lookup?lattitude=${lat.value}&longitude=${lng.value}`
+    const response = await fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        mode: 'no-cors'
     });
+
+    if (!response.ok) {
+        throw new Error(response.statusText);
+    }
+
+    const data = await response.json();
+    console.log(data);
+    outputElement.textContent = data.message;
+  } catch (error) {
+    outputElement.textContent = error.message;
   }
+}
 
 </script>
 
