@@ -12,7 +12,7 @@ Im Frontend werden die aktuellen GPS Daten / IP Adresse vom User entgegen genomm
 
 ![Frontend](../ressources/icons/front-end.png){: width="250px" }
 
-[Quelle Bild - Icons](../anhang/600-quellen.md#64-icons)
+[Quelle Bild - Icons](../anhang/600-quellen.md#6.4-icons)
 
 Die URL des Frontends ist:
 
