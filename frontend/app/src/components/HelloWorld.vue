@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>Bitte klicken Sie hier um ihre persönliche Wetterprognose zu erhalten Test.<br>
-      <button @click="async() => await fetchWeather()">Wetterdaten berechnen</button><br>
-      {{ lat }} , {{ lng }} , <span id="weatherOutput"></span>
+    <p>Bitte klicken Sie hier, um Ihre persönliche Wetterprognose zu erhalten.<br>
+      <button @click="async () => await fetchWeather()">Wetterdaten berechnen</button><br>
+      {{ lat }}, {{ lng }}, <span id="weatherOutput"></span>
     </p>
   </div>
 </template>
