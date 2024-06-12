@@ -4,6 +4,7 @@ from app.weather.llm_api import send_message_to_llm
 from app.auth import token_auth
 from app.models.weather import LocationIn, WeatherOut
 from json import dumps as json_dumps
+from apiflask import abort as flask_abort
 #import logging
 
 # get weather info
@@ -15,6 +16,8 @@ def weather_data_from_lattitude_and_longitude(query_data):
     # first, get the forecast data
     lattitude = query_data['lattitude']
     longitude = query_data['longitude']
+    if lattitude == 0 or longitude == 0:
+        flask_abort(404, f"On this geolocation is no city: {lattitude}, {longitude}")
     city_name, country = get_city_name_from_lat_and_lon(lattitude, longitude)
     raw_forecast_data = make_relay_api_call_based_on_lat_and_lon(lattitude, longitude)
 

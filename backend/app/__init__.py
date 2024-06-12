@@ -2,10 +2,12 @@
 from apiflask import APIFlask
 from config import Config
 from app.extensions import db
+from flask_cors import CORS
 import flask_monitoringdashboard as dashboard
 
 def create_app(config_class=Config, config_overwrites=dict()):
     app = APIFlask(__name__)
+    CORS(app)
     app.config.from_object(config_class)
 
     # this is necessary for the test env to start up correctly.
