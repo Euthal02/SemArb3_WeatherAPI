@@ -44,7 +44,10 @@ async function testGetUsersWithAuthentication() {
     try {
         const response = await axios.post('http://localhost:5000/users/login', {
             email: "admin@admin.ch",
-            password: "admin"
+            password: "admin"}, {
+          headers: {
+              'Access-Control-Allow-Origin': '*'
+           }
         });
 
         if (!response.data.token) {
