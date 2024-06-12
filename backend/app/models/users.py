@@ -1,5 +1,5 @@
 from apiflask import Schema
-from apiflask.fields import String, Integer
+from apiflask.fields import String, Integer, Boolean
 from apiflask.validators import Length, Email
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import current_app
@@ -18,10 +18,12 @@ class UsersModel(db.Model):
     name = db.Column(db.String(128))
     email = db.Column(db.String(128), unique=True)
     password = db.Column(db.String(256))
+    is_admin = db.Column(db.Boolean)
 
-    def __init__( self, email, name, password ):
+    def __init__( self, email, name, password, is_admin=False ):
         self.email = email
         self.name = name
+        self.is_admin = is_admin
         self.password = generate_password_hash(password)
 
     def check_password(self, password):
@@ -49,12 +51,20 @@ class UsersModel(db.Model):
             # Log or handle other exceptions
             print(f"An error occurred: {e}")
             return None
+        
+    @staticmethod
+    def get_roles( user ):
+        user_role = ["User"]
+        if user.is_admin:
+            user_role = ["Admin"]
+        return user_role
 
 # define the schema for the user input
 class UsersIn(Schema):
     name = String(required=True, validate=Length(0, 128))
     email = String(required=True, validate=[Length(0, 128), Email()])
     password = String(required=True, validate=Length(0, 256))
+    is_admin = Boolean(required=False, load_default=False)
 
 # define the schema for the output
 class UsersOut(Schema):
