@@ -8,7 +8,7 @@ def create_test_data():
 
     # Beispieldaten
     users = [
-        {'name': 'test', 'email': 'test@test.ch', 'password': 'test'}
+        {'name': 'test', 'email': 'test@test.ch', 'password': 'test', 'is_admin': 1}
     ]
     for user_data in users:
         user = UsersModel(**user_data)
