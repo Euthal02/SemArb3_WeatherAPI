@@ -15,4 +15,6 @@ Die ganze API basiert auf dem REST Prinzip und ist mit Python umgesetzt. Genauer
 
 Die ganze Flask API besteht aus zwei Basisrouten. */user*, welche das ganze Userhandling erledigt, inklusive Login und */weather*, welche den Locationinput annimmt und eine Voraussage zurückgibt. Wir benötigen ein Login, um eine unerwünschte Ausnutzung unserer API zu verhindern, da die Anbindung an ChatGPT uns etwas Geld kostet.
 
-Als Webserver für die API nutzen wir Gunicron, welcher auch ganz einfach mittels PIP im Container Image installiert werden kann.
+Als Webserver für die API nutzen wir Gunicorn, welcher auch ganz einfach mittels PIP im Container Image installiert werden kann.
+
+Flask hat einen integrierten Webserver, dieser ist aber nur für Development Zwecke gedacht, deshalb benötigen wir einen separaten Webserver.
