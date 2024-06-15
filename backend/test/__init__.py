@@ -5,6 +5,7 @@ from test.create_test_data import create_test_data
 
 basedir = os_path.abspath(os_path.dirname(__file__))
 
+
 @pytest_fixture
 def client():
 

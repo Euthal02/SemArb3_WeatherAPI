@@ -7,12 +7,14 @@ from app.models.users import UsersModel, UsersIn, UsersOut, LoginIn, TokenOut
 from logging import warning as logging_warning
 from logging import info as logging_info
 
+
 # get all users
 @bp.get('/')
 @bp.auth_required(token_auth)
 @bp.output(UsersOut(many=True))
 def view_users(database_table=UsersModel):
     return database_table.query.all()
+
 
 # get user by id
 @bp.get('/<int:user_id>')
@@ -21,6 +23,7 @@ def view_users(database_table=UsersModel):
 def view_user_by_id(user_id, database_table=UsersModel):
     user = db.get_or_404(database_table, user_id)
     return user
+
 
 # create new user
 @bp.post('/create')
@@ -33,6 +36,7 @@ def create_user(json_data, database_table=UsersModel):
     db.session.add(user)
     db.session.commit()
     return user
+
 
 # change the information for a db entry
 @bp.patch('/<int:user_id>/edit')
@@ -49,6 +53,7 @@ def update_user(user_id, json_data, database_table=UsersModel):
     db.session.commit()
     return user
 
+
 # remove user by id
 @bp.delete('/<int:user_id>/delete')
 @bp.auth_required(token_auth)
@@ -58,6 +63,7 @@ def delete_user(user_id, database_table=UsersModel):
     db.session.delete(user)
     db.session.commit()
     return database_table.query.all()
+
 
 # create new user
 @bp.post('/login')
@@ -73,4 +79,4 @@ def login_user(json_data, database_table=UsersModel):
     
     token = user.generate_auth_token(600)
     logging_info('User '+json_data.get('email') + ' logged in')
-    return { 'token': token, 'duration': 600 }
+    return {'token': token, 'duration': 600}

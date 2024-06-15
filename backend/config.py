@@ -1,5 +1,6 @@
 from os import environ as os_environ
 
+
 class Config:
     # env variables
     SECRET_KEY = os_environ.get('SECRET_KEY')

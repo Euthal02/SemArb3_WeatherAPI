@@ -5,6 +5,7 @@ from app.extensions import db
 from flask_cors import CORS
 import flask_monitoringdashboard as dashboard
 
+
 def create_app(config_class=Config, config_overwrites=dict()):
     app = APIFlask(__name__)
     CORS(app, send_wildcard=True)

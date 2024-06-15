@@ -7,6 +7,7 @@ from json import dumps as json_dumps
 from apiflask import abort as flask_abort
 #import logging
 
+
 # get weather info
 @bp.get('/lookup')
 @bp.auth_required(token_auth)
@@ -22,7 +23,6 @@ def weather_data_from_lattitude_and_longitude(query_data):
     raw_forecast_data = make_relay_api_call_based_on_lat_and_lon(lattitude, longitude)
 
     # second, we have to create a funny forecast from it.
-    # ToDo: create funny forecast
     forecast_as_string = json_dumps(raw_forecast_data)
     funny_forecast = send_message_to_llm(forecast_as_string)
 

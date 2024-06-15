@@ -3,13 +3,12 @@ from apiflask.fields import String, Integer, Boolean
 from apiflask.validators import Length, Email
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import current_app
-from app.extensions import db
 from jwt import encode as jwt_encode
 from jwt import decode as jwt_decode
 from jwt import ExpiredSignatureError, InvalidTokenError
 from datetime import datetime, timezone
-
 from app.extensions import db
+
 
 # define the user table
 class UsersModel(db.Model):
@@ -59,12 +58,14 @@ class UsersModel(db.Model):
             user_role = ["Admin"]
         return user_role
 
+
 # define the schema for the user input
 class UsersIn(Schema):
     name = String(required=True, validate=Length(0, 128))
     email = String(required=True, validate=[Length(0, 128), Email()])
     password = String(required=True, validate=Length(0, 256))
     is_admin = Boolean(required=False, load_default=False)
+
 
 # define the schema for the output
 class UsersOut(Schema):
@@ -73,9 +74,11 @@ class UsersOut(Schema):
     email = String()
     password = String()
 
+
 class LoginIn(Schema):
     email = String(required=True, validate=[Length(0, 128), Email()])
     password = String(required=True, validate=Length(0, 256))
+
 
 class TokenOut(Schema):
     token = String()
