@@ -1,2 +1,4 @@
 from test import client
-# implement tests for weather routes
+
+def test_weather_data_from_lattitude_and_longitude(client):
+    pass

@@ -4,9 +4,10 @@
 #############################################
 from requests import get as requests_get
 from apiflask import abort as flask_abort
+from flask import current_app
 
 RELAY_API_URL = "http://api.openweathermap.org"
-RELAY_API_KEY = "ea0c217526b140ece2689be7d00653bb"
+RELAY_API_KEY = current_app.config['WEATHER_API_KEY']
 FORECAST_LENGTH = 10 # in 3 hour chunks
 
 def get_city_name_from_lat_and_lon(lattitude, longitude):

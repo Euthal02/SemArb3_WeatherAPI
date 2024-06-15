@@ -95,6 +95,7 @@ jobs:
           echo MYSQL_DATABASE="${{ vars.MYSQL_DATABASE }}" >> .env
           echo DASHBOARD_ENABLED="${{ vars.DASHBOARD_ENABLED }}" >> .env
           echo DATABASE_URI="${{ vars.DATABASE_URI }}" >> .env
+          echo WEATHER_API_KEY="${{ secrets.WEATHER_API_KEY }}" >> .env
 
       - name: Copy files to Server
         run: |

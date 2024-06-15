@@ -9,6 +9,7 @@ class Config:
     PROJECT = os_environ.get('PROJECT')
     API_KEY = os_environ.get('API_KEY')
     ASSISTANT_ID = os_environ.get('ASSISTANT_ID')
+    WEATHER_API_KEY = os_environ.get('WEATHER_API_KEY')
 
     # control variables
     SQLALCHEMY_TRACK_MODIFICATIONS = False
