@@ -29,7 +29,6 @@ def view_user_by_id(user_id, database_table=UsersModel):
 @bp.input(UsersIn, location='json')
 @bp.output(UsersOut, status_code=201)
 def create_user(json_data, database_table=UsersModel):
-    token_auth.current_user
     user = database_table(**json_data)
     db.session.add(user)
     db.session.commit()

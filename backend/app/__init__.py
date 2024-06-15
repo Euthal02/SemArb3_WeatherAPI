@@ -8,7 +8,7 @@ import flask_monitoringdashboard as dashboard
 def create_app(config_class=Config, config_overwrites=dict()):
     app = APIFlask(__name__)
     CORS(app, send_wildcard=True)
-    app.config.from_object(config_class)heid
+    app.config.from_object(config_class)
 
     # this is necessary for the test env to start up correctly.
     if config_overwrites:
