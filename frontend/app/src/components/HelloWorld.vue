@@ -41,7 +41,7 @@ async function getLocation() {
 
 async function testGetUsersWithAuthentication() {
   try {
-    const response = await axios.post('http://localhost:5000//users/login', {
+    const response = await axios.post('https://backend.meuthak.ch/users/login', {
       email: "admin@admin.ch",
       password: "admin"
     }, {
@@ -78,8 +78,8 @@ async function fetchWeather() {
       console.error('Error getting location:', error);
     }
 
-    const apiUrl = `http://localhost:5000/weather/lookup?lattitude=${latitude}&longitude=${longitude}`;
-    
+    const apiUrl = `https://backend.meuthak.ch/weather/lookup?lattitude=${latitude}&longitude=${longitude}`;
+
     const response = await axios.get(apiUrl, {
       headers: {
         'Content-Type': 'application/json',
