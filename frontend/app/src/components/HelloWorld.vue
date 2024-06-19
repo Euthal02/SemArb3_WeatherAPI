@@ -1,4 +1,5 @@
 <template>
+
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
@@ -8,7 +9,6 @@
     </p>
   </div>
 </template>
-
 <script setup>
 import { ref } from 'vue';
 import axios from 'axios';
@@ -41,7 +41,7 @@ async function getLocation() {
 
 async function testGetUsersWithAuthentication() {
   try {
-    const response = await axios.post('http://localhost:5000/users/login', {
+    const response = await axios.post('http://localhost:5000//users/login', {
       email: "admin@admin.ch",
       password: "admin"
     }, {
@@ -96,7 +96,6 @@ async function fetchWeather() {
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 body {
@@ -168,4 +167,3 @@ a:hover {
   text-decoration: underline;
 }
 </style>
-
