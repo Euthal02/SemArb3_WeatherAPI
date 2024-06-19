@@ -10,7 +10,6 @@ services:
     volumes:
       - .:/app
       - monitoring-dashboard:/var/tmp
-      - ./certs/:/var/certs
     env_file:
       - path: .env
     depends_on:
