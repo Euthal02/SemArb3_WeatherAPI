@@ -41,7 +41,7 @@ async function getLocation() {
 
 async function testGetUsersWithAuthentication() {
   try {
-    const response = await axios.post('http://localhost:5000/users/login', {
+    const response = await axios.post('http://ec2-44-194-144-99.compute-1.amazonaws.com:5000//users/login', {
       email: "admin@admin.ch",
       password: "admin"
     }, {
@@ -78,7 +78,7 @@ async function fetchWeather() {
       console.error('Error getting location:', error);
     }
 
-    const apiUrl = `http://localhost:5000/weather/lookup?lattitude=${latitude}&longitude=${longitude}`;
+    const apiUrl = `http://ec2-44-194-144-99.compute-1.amazonaws.com:5000/weather/lookup?lattitude=${latitude}&longitude=${longitude}`;
     
     const response = await axios.get(apiUrl, {
       headers: {

@@ -33,3 +33,9 @@ Zuerst wollte ich die Standorte der Clientanfragen über einen IP-Location-Finde
 Ich habe dann herausgefunden, wie wir die Geolocation-API in unserem Projekt einsetzen können, um den geografischen Standort der Benutzer zu ermitteln. Diese API ist bereits in modernen Webbrowsern integriert, was bedeutet, dass wir keine zusätzlichen Bibliotheken benötigen. Die Geolocation-API ermöglicht es, den aktuellen Standort des Benutzers durch verschiedene Methoden wie GPS, WLAN und IP-Adressen zu bestimmen. Für die Nutzung der API ist die Zustimmung des Benutzers erforderlich, was eine kleine Herausforderung darstellte. Lokal funktionierte das Testing problemlos, jedoch wurde das erforderliche Pop-Up für die Standortfreigabe nicht angezeigt, als wir es online testen wollten. Wir haben herausgefunden, dass ein SSL-Zertifikat benötigt wird. Daher haben wir über AWS einen Load Balancer eingerichtet und das dort gelöste SSL-Zertifikat angehängt.
 
 
+## Webserver
+
+### Ngnix
+
+Ich habe mich für Nginx entschieden, weil Nginx ideal für das Bereitstellen statischer Inhalte, das Weiterleiten von Anfragen an Backend-Server und das Verwalten des Datenverkehrs in verteilten Systemen ist. Diese Eigenschaften machen Nginx zu einer ausgezeichneten Wahl für moderne Webanwendungen, wie unsere.
+
