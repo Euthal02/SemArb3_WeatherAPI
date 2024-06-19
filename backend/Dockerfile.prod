@@ -21,4 +21,4 @@ ADD . /app
 
 # This is the runtime command for the container
 # Add below line if not using docker-compose
-CMD [ "gunicorn", "--certfile /var/certs/cert.pem", "--keyfile /var/certs/key.pem ", "-b", "0.0.0.0:5000", "wsgi:app" ]
+CMD [ "gunicorn", "--certfile=/var/certs/cert.pem", "--keyfile=/var/certs/key.pem ", "-b", "0.0.0.0:5000", "wsgi:app" ]
