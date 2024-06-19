@@ -13,4 +13,5 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Executable commands
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+# adhoc just because it is easier to implement
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--cert=adhoc"]
