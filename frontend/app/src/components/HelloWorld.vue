@@ -1,14 +1,15 @@
 <template>
-
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
       Bitte klicken Sie hier, um Ihre persönliche Wetterprognose zu erhalten.<br>
-      <button @click="fetchWeather">Wetterdaten berechnen</button><br>
+      <button @click="fetchWeather" :disabled="loading">Wetterdaten berechnen</button><br>
+      <div v-if="loading" class="loading-bar"></div>
       <span class="weather-output" v-html="weatherOutput"></span>
     </p>
   </div>
 </template>
+
 <script setup>
 import { ref } from 'vue';
 import axios from 'axios';
@@ -17,6 +18,7 @@ const lat = ref(0);
 const lng = ref(0);
 const token = ref(null); // Variable zum Speichern des Tokens
 const weatherOutput = ref(''); // Reactive variable for weather output
+const loading = ref(false); // Reactive variable for loading state
 
 const msg = 'Willkommen zu Ihrer Wetter-App';
 
@@ -64,6 +66,7 @@ async function testGetUsersWithAuthentication() {
 }
 
 async function fetchWeather() {
+  loading.value = true; // Set loading state to true
   try {
     const accessToken = await testGetUsersWithAuthentication(); // Authentifizierung durchführen und Token erhalten
 
@@ -93,11 +96,27 @@ async function fetchWeather() {
     weatherOutput.value = data.message.replace(/\n/g, '<br>'); // Replace \n with <br>
   } catch (error) {
     weatherOutput.value = error.message.replace(/\n/g, '<br>'); // Replace \n with <br>
+  } finally {
+    loading.value = false; // Set loading state back to false after request completes
   }
 }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
+/* CSS für den Ladebalken */
+.loading-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #CEDDEF;
+  margin: 10px 0;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f9;
