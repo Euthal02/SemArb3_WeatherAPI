@@ -10,6 +10,7 @@ services:
       - 5000:5000
     volumes:
       - monitoring-prod-dashboard:/var/tmp
+      - certs:/var/certs
     depends_on:
       semarb3_db_prod:
         condition: service_healthy
@@ -34,3 +35,4 @@ services:
 volumes:
   semarb3_db_prod:
   monitoring-prod-dashboard:
+  certs:

@@ -14,4 +14,4 @@ COPY . .
 
 # Executable commands
 # adhoc just because it is easier to implement
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--cert=adhoc"]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--cert=certs/cert.pem", "--key=certs/key.pem"]
