@@ -12,7 +12,6 @@
 <script setup>
 import { ref } from 'vue';
 import axios from 'axios';
-import https from 'https';
 
 const lat = ref(0);
 const lng = ref(0);
@@ -20,13 +19,6 @@ const token = ref(null); // Variable zum Speichern des Tokens
 const weatherOutput = ref(''); // Reactive variable for weather output
 
 const msg = 'Willkommen zu Ihrer Wetter-App';
-
-// Erstellen einer Axios-Instanz mit Akzeptanz für selbstsignierte Zertifikate
-const axiosInstance = axios.create({
-  httpsAgent: new https.Agent({
-    rejectUnauthorized: false, // Dies erlaubt selbstsignierte Zertifikate
-  }),
-});
 
 async function getLocation() {
   return new Promise((resolve, reject) => {
@@ -49,7 +41,7 @@ async function getLocation() {
 
 async function testGetUsersWithAuthentication() {
   try {
-    const response = await axiosInstance.post('http://ec2-44-194-144-99.compute-1.amazonaws.com:5000//users/login', {
+    const response = await axios.post('http://localhost:5000/users/login', {
       email: "admin@admin.ch",
       password: "admin"
     }, {
@@ -86,9 +78,9 @@ async function fetchWeather() {
       console.error('Error getting location:', error);
     }
 
-    const apiUrl = `http://ec2-44-194-144-99.compute-1.amazonaws.com:5000/weather/lookup?lattitude=${latitude}&longitude=${longitude}`;
+    const apiUrl = `http://localhost:5000/weather/lookup?lattitude=${latitude}&longitude=${longitude}`;
     
-    const response = await axiosInstance.get(apiUrl, {
+    const response = await axios.get(apiUrl, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${accessToken}`,
@@ -105,6 +97,7 @@ async function fetchWeather() {
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 body {
   font-family: 'Arial', sans-serif;
@@ -175,3 +168,4 @@ a:hover {
   text-decoration: underline;
 }
 </style>
+
