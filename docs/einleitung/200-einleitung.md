@@ -7,11 +7,7 @@ nav_order: 200
 
 # 2. Einleitung
 
-Allgemeine Fragen / Problemstellung und Erwartungen werden im Kapitel Einleitung bearbeitet.
-
-Hier sollten sich alle Fragen bezüglich eventuellen SOLL Zuständen klären.
-
-Der Weg zwischen IST und SOLL Zustand wird geplant und alle anderen Projektdaten werden hier definiert.
+Im Kapitel Einleitung werden die Ramenbedingungen beschrieben, welche für die Semesterarbeit verwendet werden und relevant sind.
 Dazu gehört unter anderem:
 
 - Ziele
