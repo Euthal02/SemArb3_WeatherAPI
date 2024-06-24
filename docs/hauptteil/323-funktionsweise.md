@@ -21,4 +21,4 @@ Das Frontend meldet sich am Backend mit E-Mail und Passwort an. Nach der Anmeldu
 
 So sieht eine Ausgabe aus:
 
-![Screenshot](../ressources/images/frontend/Webseite.jpg){: width="250px" }
+![Screenshot](../ressources/images/frontend/Webseite.jpg)
