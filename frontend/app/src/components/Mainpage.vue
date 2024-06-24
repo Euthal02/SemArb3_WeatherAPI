@@ -4,8 +4,8 @@
     <p>
       Bitte klicken Sie hier, um Ihre persönliche Wetterprognose zu erhalten.<br>
       <button @click="fetchWeather" :disabled="loading">Wetterdaten berechnen</button><br>
-      <div v-if="loading" class="loading-bar"></div>
-      <span class="weather-output" v-html="weatherOutput"></span>
+      <div v-if="loading" class="loading-bar"></div> <!-- Ladebalken -->
+      <span class="weather-output" v-html="weatherOutput"></span> <!-- Wetterausgabe -->
     </p>
   </div>
 </template>
@@ -14,15 +14,16 @@
 import { ref } from 'vue';
 import axios from 'axios';
 
-const lat = ref(0);
-const lng = ref(0);
+const lat = ref(0); // Latitude (Breitengrad)
+const lng = ref(0); // Longitude (Längengrad)
 const token = ref(null); // Variable zum Speichern des Tokens
-const weatherOutput = ref(''); // Reactive variable for weather output
-const loading = ref(false); // Reactive variable for loading state
+const weatherOutput = ref(''); // Reaktive Variable für die Wetterausgabe
+const loading = ref(false); // Reaktive Variable für den Ladezustand
 
 const msg = 'Willkommen zu Ihrer Wetter-App';
 
 async function getLocation() {
+  // Funktion zur Ermittlung der aktuellen Geoposition
   return new Promise((resolve, reject) => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -42,6 +43,7 @@ async function getLocation() {
 }
 
 async function testGetUsersWithAuthentication() {
+  // Funktion zur Authentifizierung und Token-Erhalt
   try {
     const response = await axios.post('https://backend.meuthak.ch/users/login', {
       email: "admin@admin.ch",
@@ -66,14 +68,15 @@ async function testGetUsersWithAuthentication() {
 }
 
 async function fetchWeather() {
-  loading.value = true; // Set loading state to true
+  // Funktion zum Abrufen der Wetterdaten
+  loading.value = true; // Ladezustand auf true setzen
   try {
     const accessToken = await testGetUsersWithAuthentication(); // Authentifizierung durchführen und Token erhalten
 
     let latitude;
     let longitude;
     try {
-      const geo_values = await getLocation();
+      const geo_values = await getLocation(); // Geoposition ermitteln
       latitude = geo_values[0];
       longitude = geo_values[1];
       console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
@@ -93,11 +96,11 @@ async function fetchWeather() {
 
     const data = response.data;
     console.log(data);
-    weatherOutput.value = data.message.replace(/\n/g, '<br>'); // Replace \n with <br>
+    weatherOutput.value = data.message.replace(/\n/g, '<br>'); // Zeilenumbrüche ersetzen
   } catch (error) {
-    weatherOutput.value = error.message.replace(/\n/g, '<br>'); // Replace \n with <br>
+    weatherOutput.value = error.message.replace(/\n/g, '<br>'); // Zeilenumbrüche ersetzen
   } finally {
-    loading.value = false; // Set loading state back to false after request completes
+    loading.value = false; // Ladezustand wieder auf false setzen
   }
 }
 </script>
