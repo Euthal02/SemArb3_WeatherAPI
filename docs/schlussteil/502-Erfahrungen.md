@@ -9,7 +9,7 @@ nav_order: 500
 
 In diesem Abschnitt werden wir unsere Semesterarbeit reflektieren. Wir werden dieses mit dem Titel *Backend* und *Frontend* unterteilen, damit man die Reflexion auch voneinander trennen kann.
 
-
+![Finish](../ressources/icons/exchange.png){: width="250px" }
 
 
 

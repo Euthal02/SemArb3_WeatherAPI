@@ -7,7 +7,7 @@ nav_order: 500
 
 # 5. Schlussteil
 
-Im Schlussteil vergleichen wir die gestellten Ziele und erahnte Risiken mit dem effektiven Projekt.
+Im Kapitel Schlussteil werden wir unsere gemachte Erfahrungen des Projektes reflektieren. Wir werden die Probleme darlegen und beschreiben, denen wir während der Semesterarbeit begegnet sind.
 
 ![Finish](../ressources/icons/finish.png){: width="250px" }
 
