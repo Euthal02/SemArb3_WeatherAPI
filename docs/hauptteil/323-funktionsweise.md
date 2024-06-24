@@ -22,3 +22,5 @@ Das Frontend meldet sich am Backend mit E-Mail und Passwort an. Nach der Anmeldu
 So sieht eine Ausgabe aus:
 
 ![Screenshot](../ressources/images/frontend/Webseite.jpg)
+
+Einiges im Frontend habe ich mit ChatGPT Programmiert, da ich keinerlei Erfahrungen mit Frontendentwicklung habe und dies auch nicht das Kernthema der Arbeit war. Ich bin sehr erstaunt wie einfach man ein schlichtes Frontend mittels ChatGPT entwickeln kann.
