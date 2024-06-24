@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 5.0.2 Gemachte Erfahrungen
+title: 5.2 Gemachte Erfahrungen
 parent: 5. Schlussteil
-nav_order: 500
+nav_order: 502
 ---
 
 # Gemacht Erfahrungen
