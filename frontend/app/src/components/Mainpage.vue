@@ -129,6 +129,8 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  padding: 0 1rem; /* Padding to prevent content from touching the screen edges */
+  box-sizing: border-box;
 }
 
 .hello {
@@ -197,6 +199,7 @@ a:hover {
 @media (max-width: 600px) {
   .hello {
     padding: 1rem;
+    margin: 0 1rem; /* Ensure some margin on the sides */
   }
 
   p {
