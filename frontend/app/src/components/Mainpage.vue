@@ -14,12 +14,6 @@
 import { ref } from 'vue';
 import axios from 'axios';
 
-const MarkdownIt = require('markdown-it')
-const md = new MarkdownIt()
-const markdownText = 'weather-output'
-const htmlText = md.render(markdownText)
-console.log(htmlText)
-
 const lat = ref(0); // Latitude (Breitengrad)
 const lng = ref(0); // Longitude (Längengrad)
 const token = ref(null); // Variable zum Speichern des Tokens
