@@ -129,7 +129,6 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  overflow: hidden;
 }
 
 .hello {
@@ -138,9 +137,10 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 90%;
   max-width: 500px;
+  width: 90%;
   box-sizing: border-box;
+  margin: auto; /* Zentriert den Container horizontal */
 }
 
 h1 {
@@ -193,14 +193,8 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Anpassungen für Hochformat auf kleineren Bildschirmen */
-@media (max-width: 600px) and (orientation: portrait) {
-  body {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
+/* Anpassungen für kleinere Bildschirme */
+@media (max-width: 600px) {
   .hello {
     padding: 1rem;
     width: 90%;
