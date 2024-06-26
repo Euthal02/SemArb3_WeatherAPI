@@ -129,8 +129,6 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  padding: 0 1rem; /* Padding to prevent content from touching the screen edges */
-  box-sizing: border-box;
 }
 
 .hello {
@@ -139,9 +137,8 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 100%;
-  max-width: 600px;
-  box-sizing: border-box;
+  max-width: 90%; /* Ensures it adapts to smaller screens */
+  box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
 h1 {
@@ -174,8 +171,8 @@ button:hover {
 
 .weather-output {
   padding: 10px;
-  margin: 10px auto;
-  max-width: 100%;
+  margin: 10px;
+  max-width: 500px;
   display: inline-block;
   background: #f0f0f0;
   border-radius: 4px;
@@ -183,7 +180,6 @@ button:hover {
   font-size: 1.1rem;
   color: #555;
   text-align: left;
-  word-wrap: break-word;
 }
 
 a {
@@ -193,26 +189,5 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-/* Responsive Anpassungen */
-@media (max-width: 600px) {
-  .hello {
-    padding: 1rem;
-    margin: 0 1rem; /* Ensure some margin on the sides */
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  button {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .weather-output {
-    font-size: 1rem;
-  }
 }
 </style>
