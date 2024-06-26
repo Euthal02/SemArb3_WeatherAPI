@@ -14,11 +14,8 @@
 import { ref } from 'vue';
 import axios from 'axios';
 
-const MarkdownIt = require('markdown-it')
-const md = new MarkdownIt()
-const markdownText = 'weather-output'
-const htmlText = md.render(markdownText)
-console.log(htmlText)
+const MarkdownIt = require('markdown-it');
+const md = new MarkdownIt();
 
 const lat = ref(0); // Latitude (Breitengrad)
 const lng = ref(0); // Longitude (Längengrad)
@@ -102,9 +99,9 @@ async function fetchWeather() {
 
     const data = response.data;
     console.log(data);
-    weatherOutput.value = data.message.replace(/\n/g, '<br>'); // Zeilenumbrüche ersetzen
+    weatherOutput.value = md.render(data.message); // Render markdown to HTML
   } catch (error) {
-    weatherOutput.value = error.message.replace(/\n/g, '<br>'); // Zeilenumbrüche ersetzen
+    weatherOutput.value = md.render(error.message); // Render markdown to HTML
   } finally {
     loading.value = false; // Ladezustand wieder auf false setzen
   }
