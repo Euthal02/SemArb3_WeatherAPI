@@ -197,8 +197,8 @@ a:hover {
 @media (max-width: 600px) {
   .hello {
     padding: 1rem;
-    width: 90%;
-    max-width: 90%;
+    width: 100%; /* 100% Breite für kleinere Bildschirme */
+    max-width: 100%;
   }
 
   p {
@@ -219,3 +219,4 @@ a:hover {
   }
 }
 </style>
+
