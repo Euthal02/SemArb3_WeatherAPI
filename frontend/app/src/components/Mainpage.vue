@@ -140,6 +140,9 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -172,8 +175,8 @@ button:hover {
 
 .weather-output {
   padding: 10px;
-  margin: 10px;
-  max-width: 500px;
+  margin: 10px auto;
+  max-width: 100%;
   display: inline-block;
   background: #f0f0f0;
   border-radius: 4px;
@@ -181,6 +184,7 @@ button:hover {
   font-size: 1.1rem;
   color: #555;
   text-align: left;
+  word-wrap: break-word;
 }
 
 a {
@@ -190,5 +194,25 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 600px) {
+  .hello {
+    padding: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .weather-output {
+    font-size: 1rem;
+  }
 }
 </style>
