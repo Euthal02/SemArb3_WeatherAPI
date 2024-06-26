@@ -137,8 +137,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 90%; /* Ensures it adapts to smaller screens */
-  box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
 h1 {
