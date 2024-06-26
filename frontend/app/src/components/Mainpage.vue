@@ -137,10 +137,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 500px;
-  width: 90%;
-  box-sizing: border-box;
-  margin: auto; /* Zentriert den Container horizontal */
 }
 
 h1 {
@@ -192,31 +188,4 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-/* Anpassungen für kleinere Bildschirme */
-@media (max-width: 600px) {
-  .hello {
-    padding: 1rem;
-    width: 100%; /* 100% Breite für kleinere Bildschirme */
-    max-width: 100%;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 1rem;
-  }
-
-  button {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-  }
-
-  .weather-output {
-    width: 100%;
-    font-size: 1rem;
-  }
-}
 </style>
-
