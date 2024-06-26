@@ -129,6 +129,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  overflow: hidden;
 }
 
 .hello {
@@ -137,6 +138,9 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 90%;
+  max-width: 500px;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -187,5 +191,37 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Anpassungen für Hochformat auf kleineren Bildschirmen */
+@media (max-width: 600px) and (orientation: portrait) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hello {
+    padding: 1rem;
+    width: 90%;
+    max-width: 90%;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .weather-output {
+    width: 100%;
+    font-size: 1rem;
+  }
 }
 </style>
