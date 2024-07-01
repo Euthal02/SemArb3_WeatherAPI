@@ -9,7 +9,7 @@ nav_order: 401
 
 Hier sind die Erkenntnisse des ersten Sprintmeetings.
 
-![Star](../ressources/icons/star.png){: width="250px" }
+![Star](../ressources/icons/star.png){: width="220px" }
 
 ## Was ist gut gelaufen? Was konnte bereits erreicht werden?
 

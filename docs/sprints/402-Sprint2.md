@@ -9,8 +9,8 @@ nav_order: 402
 
 Hier sind die Erkenntnisse des zweiten Sprintmeetings.
 
-![Star](../ressources/icons/star.png){: width="250px" }
-![Star](../ressources/icons/star.png){: width="250px" }
+![Star](../ressources/icons/star.png){: width="220px" }
+![Star](../ressources/icons/star.png){: width="220px" }
 
 ## Was ist gut gelaufen? Was konnte bereits erreicht werden?
 

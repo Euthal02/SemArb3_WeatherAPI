@@ -9,6 +9,6 @@ nav_order: 403
 
 Hier sind die Erkenntnisse des dritten Sprintmeetings.
 
-![Star](../ressources/icons/star.png){: width="250px" }
-![Star](../ressources/icons/star.png){: width="250px" }
-![Star](../ressources/icons/star.png){: width="250px" }
+![Star](../ressources/icons/star.png){: width="220px" }
+![Star](../ressources/icons/star.png){: width="220px" }
+![Star](../ressources/icons/star.png){: width="220px" }
