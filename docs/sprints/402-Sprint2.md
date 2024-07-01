@@ -10,20 +10,23 @@ nav_order: 402
 Hier sind die Erkenntnisse des zweiten Sprintmeetings.
 
 ![Star](../ressources/icons/star.png){: width="220px" }
-![Star](../ressources/icons/star.png){: width="220px" }
 
 ## Was ist gut gelaufen? Was konnte bereits erreicht werden?
 
 ## Marco
 
+Ich konnte innerhalb des zweiten Sprints viele Tasks / Ziele erreichen. Ich konnte Dennis sehr gut unterstützen und bin der Meinung, dass wir ein solides Produkt erstellen konnten.
 
+Dieses Produkt wird zwar nicht das grösste sein, jedoch haben wir uns hier auch mehr auf das wichtige Projektmanagement fokussiert. Ich finde, dass wir es einigermassen gut hingebracht haben bis jetzt, jedoch gibt es einige Punkte, welche noch Verbesserungspotenzial haben.
+
+Die Abhängigkeiten zwischen den einzelnen Teilprodukten ist grösser als gedacht und erschwierigt vieles.
 
 ## Dennis
 
-Rückblicken auf den ersten Sprint kann ich sagen, dass ich im Zeitplan liege. Ich konnte meine Ziele und Meilensteine alle erreichen und habe ein Lauffähiges Frontend Entwickelt, welches bereits Abfragen an das Backend senden und empfangen kann.
+Rückblicken auf den ersten Sprint kann ich sagen, dass ich im Zeitplan liege. Ich konnte meine Ziele und Meilensteine alle erreichen und habe ein lauffähiges Frontend entwickelt, welches bereits Abfragen an das Backend senden und empfangen kann.
 
-Ich hatte etwas schwierigkeiten mit der Produktiven Umgebung, da es dort eingie Abhängigkeiten gegen hat (Backend Cors Policy, SSL Zertifikat usw.) die es in der dev. Umgebung nicht gegeben hat.
-Die Probleme konnten wir aber gemeinsam im Team beheben und haben schliesslich eine Funktionale App Programmiert.
+Ich hatte etwas schwierigkeiten mit der produktiven Umgebung, da es dort einige Abhängigkeiten gegeben hat (Backend Cors Policy, SSL Zertifikat usw.) die es in der dev. Umgebung nicht gegeben hat.
+Die Probleme konnten wir aber gemeinsam im Team beheben und haben schliesslich eine funktionale App programmiert.
 
 ## Was hat nicht funktioniert? Was war nicht gut? Welche Aspekte sollen entfallen?
 
