@@ -25,5 +25,5 @@ So sieht eine Ausgabe aus:
 
 Einiges im Frontend habe ich mit ChatGPT Programmiert, da ich keinerlei Erfahrungen mit Frontendentwicklung habe und dies auch nicht das Kernthema der Arbeit war. Ich bin sehr erstaunt wie einfach man ein schlichtes Frontend mittels ChatGPT entwickeln kann.
 
-Der SourceCode des Frontends ist hier zu finden: [Sourcecode]https://github.com/Euthal02/SemArb3_WeatherAPI/blob/main/frontend/app/src/components/Mainpage.vue
+Der SourceCode des Frontends ist hier zu finden: [Sourcecode](https://github.com/Euthal02/SemArb3_WeatherAPI/blob/main/frontend/app/src/components/Mainpage.vue)
 
