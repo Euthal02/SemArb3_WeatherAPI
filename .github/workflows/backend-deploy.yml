@@ -34,14 +34,13 @@ jobs:
           pip install -r backend/requirements.txt
           pip install pytest
       
-      - name: Create .env file
+      - name: Create ENV Variables
         run: |
-          touch .env
-          echo API_KEY="${{ secrets.API_KEY }}" >> .env
-          echo ASSISTANT_ID="${{ secrets.ASSISTANT_ID }}" >> .env
-          echo ORGANIZATION="${{ secrets.ORGANIZATION }}" >> .env
-          echo PROJECT="${{ secrets.PROJECT }}" >> .env
-          echo WEATHER_API_KEY="${{ secrets.WEATHER_API_KEY }}" >> .env
+          export API_KEY="${{ secrets.API_KEY }}"
+          export ASSISTANT_ID="${{ secrets.ASSISTANT_ID }}"
+          export ORGANIZATION="${{ secrets.ORGANIZATION }}"
+          export PROJECT="${{ secrets.PROJECT }}"
+          export WEATHER_API_KEY="${{ secrets.WEATHER_API_KEY }}"
         
       - name: Run unit tests
         run: |
