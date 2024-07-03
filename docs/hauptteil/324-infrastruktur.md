@@ -22,13 +22,13 @@ Die zugewiesene Elastic IP ist:
 
 Für die Sicherheitsgruppe der Instanz erlauben ich SSH für das Management den Port 443 für den Loadbalancer und HTTP damit man auf die Webseite kommt.
 
-![Sicherheitsgruppe Eingehend](../ressources/images/frontend/Inbound_rule.PNG){: width="1000px" }
+![Sicherheitsgruppe Eingehend](../ressources/images/frontend/Inbound_rule.png){: width="1000px" }
 
 ## Load Balancer
 
 Da uns die EC2 Instanz eine Öffentliche IP bereitstellt, nutzen wir die Chance des AWS Load Balancers um ein Zertifikat für unseren Service zu erhalten. Der Load Balancer beinhaltet folgende Teile. Jede Abfrage auf den Load Balancer muss durch jedes Teilstück durchgehen.
 
-![Ressourcenkarte AWS](../ressources/images/frontend/ressourcenkarte_AWS.png.PNG){: width="1000px" }
+![Ressourcenkarte AWS](../ressources/images/frontend/ressourcenkarte_AWS.png){: width="1000px" }
 
 Zusätzlich ist auf dem Listener ein Zertifikat bereitgestellt, für die Domain:
 
