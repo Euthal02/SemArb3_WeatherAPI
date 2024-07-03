@@ -15,5 +15,6 @@ Im Kapitel Schlussteil werden wir unsere gemachte Erfahrungen des Projektes refl
 
 * Was lief gut in diesem Projekt?
 * Was lief schlecht?
+* Wurden unserer Ziele erreicht?
 * Was möchte ich nächstes Mal besser machen?
 * Sonstige Punkte welche zu erwähnen sind?

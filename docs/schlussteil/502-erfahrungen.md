@@ -23,7 +23,30 @@ Am Meisten mühe hatte ich bei dieser Semestarbeit mit dem Start... ich wusse ni
 
 ### Geolocation
 
-Wie bereits in der Dokumentation beschrieben, hatte ich Probleme mit dem Auslesen der Geolocation. In der lokalen Entwicklungsumgebung hat das reibungslos funktioniert, aber in der Produktivumgebung (online) nicht. Der Grund dafür war, dass die Geolocation-Funktion verlangt, dass die Webseite mit HTTPS verschlüsselt ist. Das bedeutete, dass ich für die Webseite ein SSL-Zertifikat ausstellen musste. Yve Wetter hat mir dann den Tipp gegeben, dass dies ganz einfach über AWS gemacht werden kann. Da die Produktivumgebung bereits in AWS läuft, erschien mir das sinnvoll.
+Wie bereits in der Dokumentation beschrieben, hatte ich Probleme mit dem Auslesen der Geolocation. In der lokalen Entwicklungsumgebung hat das reibungslos funktioniert, aber in der Produktivumgebung (online) nicht. Der Grund dafür war, dass die Geolocation-Funktion verlangt, dass die Webseite mit HTTPS verschlüsselt ist. Das bedeutete, dass ich für die Webseite ein SSL-Zertifikat ausstellen musste. Yve Wetter hat mir dann den Tipp gegeben, dass dies ganz einfach über AWS gemacht werden kann. Da die Produktivumgebung bereits in AWS läuft, erschien mir das sinnvoll. So sieht die Abfrage für die Geolocation aus:
+
+```
+async function getLocation() {
+  // Funktion zur Ermittlung der aktuellen Geoposition
+  return new Promise((resolve, reject) => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          lat.value = position.coords.latitude;
+          lng.value = position.coords.longitude;
+          resolve([position.coords.latitude, position.coords.longitude]);
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    } else {
+      reject(new Error("Geolocation is not supported by this browser."));
+    }
+  });
+}
+```
+
 
 Um die Lizenzierung zu ermöglichen, musste ich einen Load Balancer einrichten und die EC2-Instanz, auf der die Produktivumgebung läuft, dahinter stellen. Marco hatte glücklicherweise eine Domain, in der wir die CNAME-Einträge vornehmen konnten, sodass die Webseite schließlich erfolgreich verschlüsselt wurde. Jetzt funktioniert die Abfrage einwandfrei.
 
@@ -31,6 +54,17 @@ Um die Lizenzierung zu ermöglichen, musste ich einen Load Balancer einrichten u
 
 Nachdem das Problem mit der Geolocation gelöst war und ich die Längen und Breitengrade erhalten habe, tauche bereits das nächste Problem auf. Ich konnte die Anfrage nicht ans Backend senden, obwohl ich ein Authenfizierzungs Token hatte. Nach längerem recherchieren und zusammenarbeiten mit Marco hat sich herausgestellt, dass ich den Header für die Get -Anfrage nicht richtig konfiguriert hatte. Das API Verlangt dass im Header der Authentifizierungstoken als *Bearer* mitgegeben wird. Nach dieser Anpassung konnte ich mich dann Erfolgreich am Backend authentifizieren.
 
+```
+    const apiUrl = `https://backend.meuthak.ch/weather/lookup?lattitude=${latitude}&longitude=${longitude}`;
+
+    const response = await axios.get(apiUrl, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${accessToken}`,
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
+```
 ## Reflexion der ganzen Semesterarbeit
 
 Ich habe in dieser Semesterarbeit viel gelernt. Da dies meine erste Semsterarbeit in einem Team war, gab eis einige Herauserforderungen welche ich vorhin noch nicht hatte. Jedoch hat das Zusammenspiel zwischen mir und Marco hervorragen funktioniert. Unserer APP Funktioniert wie wir uns es gewünscht haben und ich konnte meine Ziele erreichen. Auch hat das Dokumentieren auf Github Pages sich wieder bewährt.
