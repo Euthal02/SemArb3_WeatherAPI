@@ -9,22 +9,18 @@ nav_order: 324
 
 # 3.2.4 Infrastruktur
 
-In diesem Abschnitt wird kurz die Infrastruktur für des Frontend's aufgezeigt.
+Die Infrastruktur wurde bereits im Backend beschrieben. Da ich im Frontend die Infrasturktur gleich aufgebaut habe, wird diese hier nicht nochmals genauer beschrieben. Der Aufbau kann hier eingesene werden [Aufbau der Infrastuktur](312-infrastruktur.html).
+Es unterscheiden sich nur einzelne Werte wie die Elastic IP, HTTP Anbindung und SSL-Zertifikat.
 
 ![Funktionalität](../ressources/icons/infrastructure.png){: width="250px" }
 
 [Quelle Bild - Icons](../anhang/quellen.html#54-icons)
 
-Das Frontend wir mittels einer Github Pipeline auf unsere Production Umgebung gepusht.
-
-Die gesammte Infrastruktur des Frontends wurde 1zu1 gleich aufgebaut wie die Infrasturktur des Backends [Mehr zu den Pipelines hier.](312-infrastruktur.html).
-Es unterscheiden sich nur einzelne Werte wie die Elastic IP, HTTP Anbindung und SSL-Zertifikat.
-
 Die zugewiesene Elastic IP ist:
 
 35.174.246.209
 
-Für die Sicherheitsgruppe der Instanz erlauben ich lediglich SSH für das Management und den Port 5000 für die HTTP Anbindung des Backends.
+Für die Sicherheitsgruppe der Instanz erlauben ich SSH für das Management den Port 443 für den Loadbalancer und HTTP damit man auf die Webseite kommt.
 
 ![Sicherheitsgruppe Eingehend](../ressources/images/frontend/Inbound_rule.png.PNG){: width="1000px" }
 
