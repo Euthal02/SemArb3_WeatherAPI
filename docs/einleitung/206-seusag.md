@@ -7,7 +7,7 @@ nav_order: 206
 
 # 2.6 Seusag
 
-![SEUSAG](../ressources/diagrams/weatherapi.png)
+![SEUSAG](../ressources/diagrams/weatherapi.drawio.png)
 
 1. Wird aus Github Pipeline erstellt / deployt.
 2. Die Pipeline buildet ein Docker Image, die Inhalte des Images sind als Bilder eingefügt.
