@@ -9,6 +9,7 @@ nav_order: 501
 
 ![Funktionalität](../ressources/icons/success.png){: width="250px" }
 
+[Quelle Bild - Icons](../anhang/600-quellen.html#64-icons)
 
 Um zu überprüfen, welche Ziele zu erreichen waren, haben wir diese hier nochmals aufgelistet.
 
@@ -21,8 +22,7 @@ Um zu überprüfen, welche Ziele zu erreichen waren, haben wir diese hier nochma
 
 Alle diese Ziele konnten wir während der Semesterarbeit erreicht und dokumentiert.
 
-
-# Wie ist es uns gelungen diese Ziele zu erreichen ?
+## Wie ist es uns gelungen diese Ziele zu erreichen
 
 Damit wir einen Überblick oder einen Leitfaden durch die ganze Semesterarbeit hatten, habe wir erneut mit Github Project gearbeitet. Wir hatte ein gutes Projektmanagement und haben unsere Ziele in dei Meilensteine eingetragen. So hatten wir immer die Übersicht, welche Ziele noch nicht erreicht wurden und welche noch zu erreichen waren.
 
