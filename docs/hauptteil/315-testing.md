@@ -21,9 +21,9 @@ Falls diese Tests failen, kann das deployment nicht durchgeführt werden.
 Es gibt zwei Möglichkeiten diese Tests auszuführen. Zum einen auf dem lokalen Development Gerät.
 Dazu muss man einfach mittels Docker Compose einen neuen "Test Container" erstellen.
 
-Dieser Test Container beeinflusst das Betribssystem des Geräts nicht, jegliche Abhängigkeiten welche installiert werden, werden nach der Ausführung wieder gelöscht.
+Dieser Test Container beeinflusst das Betriebssystem des Geräts nicht, jegliche Abhängigkeiten welche installiert werden, werden nach der Ausführung wieder gelöscht.
 
-``` output
+``` bash
 mka@Tuxedo-Laptop:~/repos/SemArb3_WeatherAPI/backend$ docker compose -f compose.test.yaml up --build
 [+] Building 19.5s (11/11) FINISHED                                                                                                                  docker:default
  => [semarb3_flask_test internal] load build definition from Dockerfile.test                                                                                   0.0s
@@ -66,7 +66,7 @@ Dieser Abschnitt läuft vor dem Build und Deployment. Sollten sich Fehler einges
 
 Dies hat den Effekt, dass die letzte, funktionierende Version unserer Applikation weiter auf dem Deployment Server läuft. Wir erhalten daraufhin von Github ein Mail, welches uns auf diesen Umstand hinweist und uns erlaubt den Fehler zu korrigieren.
 
-``` github-pipeline
+``` yaml
 jobs:
   test-job:
     environment: backend_env_vars
