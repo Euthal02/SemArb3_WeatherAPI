@@ -10,9 +10,15 @@ nav_order: 316
 
 Um die eigentlichen Wetterdaten zu holen, nutzen wir die öffentliche (und auch kostenlose) API von OpenWeatherMap.
 
-Es ist notwendig ein Konto zu erstellen, jedoch muss kein Betrag für dieses Konto 
+![OpenWeatherMap](../ressources/images/general/openweathermap.png){: width="1000px" }
 
-Von diesem Anbieter nutzen wir zwei Routen:
+[Quelle Bild - OpenWeatherMap](../anhang/600-quellen.html#611-openweathermap)
+
+Es ist notwendig ein Konto zu erstellen, jedoch muss kein Betrag für dieses Konto eingezahlt werden.
+
+Von diesem Anbieter nutzen wir zwei Routen. Jede Antwort von diesen Routen, kommt als JSON zurück.
+
+Dieses JSON wird anschliessend [direkt an OpenAI gesendet.](./317-openai.html)
 
 ## 5 Tages Vorhersage in 3 Stunden Blöcken
 
@@ -26,7 +32,7 @@ Man braucht drei notwendige Attribute um diese Route aufzurufen:
 
 Den geografischen Standpunkt des Benutzers unserer Applikation wird Dennis ermitteln und dies dem Backend so übermitteln.
 
-Für den API Key habe ich [den Weg über die Environment Variable genommen.](./313-sicherheitsaspekte.md)
+Für den API Key habe ich [den Weg über die Environment Variable genommen.](./313-sicherheitsaspekte.html)
 
 <https://openweathermap.org/forecast5>
 
@@ -39,7 +45,3 @@ Dazu biete OpenWeatherMap eine API an, welche genau dies erreicht. Ich kann wied
 Ich nutze diese Werte vorallem um besser beschreiben zu können, was meine API genau als Antwort gibt.
 
 In anderen Worten, diese Werte werden 1 zu 1 an das Frontend weitergegeben.
-
-![OpenWeatherMap](../ressources/images/general/openweathermap.png)
-
-[Quelle Bild - OpenWeatherMap](../anhang/600-quellen.html#611-openweathermap)
