@@ -12,7 +12,6 @@ FORECAST_LENGTH = 10  # in 3 hour chunks
 
 def get_city_name_from_lat_and_lon(lattitude, longitude):
     response = requests_get(f"{RELAY_API_URL}/geo/1.0/reverse?lat={lattitude}&lon={longitude}&limit=1&appid={current_app.config['WEATHER_API_KEY']}")
-    print(response.json())
     if response.json():
         city_name = response.json()[0]["name"]
         country = response.json()[0]["country"]
