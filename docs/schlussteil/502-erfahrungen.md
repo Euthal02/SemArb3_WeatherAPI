@@ -27,6 +27,8 @@ Generell habe ich bemerkt, dass die Vorbereitung auf ein Projekt wichtiger ist, 
 
 ## Frontend (Dennis)
 
+## Probleme
+
 ### Start der Semesterarbeit
 
 Am Meisten mühe hatte ich bei dieser Semestarbeit mit dem Start... ich wusse nicht wirklich wie und wo zu beginnen. Marco konnte mich dann unterstützen und hat mir geholfen die Entwicklungsumgebung aufzubauen. Ich war darüber sehr froh, da ich keinerlei Berührungspunkte während der Arbeit damit habe.
