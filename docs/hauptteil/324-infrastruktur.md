@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 3.2.4 Funktionsweise
+title: 3.2.4 Infrastruktur
 parent: 3.2 Frontend
 grand_parent: 3. Hauptteil
 nav_order: 324
