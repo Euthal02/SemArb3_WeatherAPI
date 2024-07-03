@@ -5,20 +5,15 @@ parent: 5. Schlussteil
 nav_order: 502
 ---
 
-# Gemacht Erfahrungen
+# 5.2 Gemachte Erfahrungen
 
 In diesem Abschnitt werden wir unsere Semesterarbeit reflektieren. Wir werden dieses mit dem Titel *Backend* und *Frontend* unterteilen, damit man die Reflexion auch voneinander trennen kann.
 
 ![Finish](../ressources/icons/exchange.png){: width="250px" }
 
+## Backend (Marco)
 
-
-# Backend (Marco)
-
-
-
-
-# Frontend (Dennis)
+## Frontend (Dennis)
 
 ## Probleme
 
@@ -34,7 +29,7 @@ Um die Lizenzierung zu ermöglichen, musste ich einen Load Balancer einrichten u
 
 ### GET -Anfrage ins Backend
 
-Nachdem das Problem mit der Geolocation gelöst war und ich die Längen und Breitengrade erhalten habe, tauche bereits das nächste Problem auf. Ich konnte die Anfrage nicht ans Backend senden, obwohl ich ein Authenfizierzungs Token hatte. Nach längerem recherchieren und zusammenarbeiten mit Marco hat sich herausgestellt, dass ich den Header für die Get -Anfrage nicht richtig konfiguriert hatte. Das API Verlangt dass im Header der Authentifizierungstoken als *Bearer* mitgegeben wird. Nach dieser Anpassung konnte ich mich dann Erfolgreich am Backend authentifizieren. 
+Nachdem das Problem mit der Geolocation gelöst war und ich die Längen und Breitengrade erhalten habe, tauche bereits das nächste Problem auf. Ich konnte die Anfrage nicht ans Backend senden, obwohl ich ein Authenfizierzungs Token hatte. Nach längerem recherchieren und zusammenarbeiten mit Marco hat sich herausgestellt, dass ich den Header für die Get -Anfrage nicht richtig konfiguriert hatte. Das API Verlangt dass im Header der Authentifizierungstoken als *Bearer* mitgegeben wird. Nach dieser Anpassung konnte ich mich dann Erfolgreich am Backend authentifizieren.
 
 ## Reflexion der ganzen Semesterarbeit
 
@@ -42,4 +37,4 @@ Ich habe in dieser Semesterarbeit viel gelernt. Da dies meine erste Semsterarbei
 
 Was ich jedoch bereits weiss ist, dass das Programmieren und ich nicht so schnell *beste Freunde* werden. Nach wie vor fällt es mir eher Schwer in der Entwicklung Fuss zu fassen. Nichts desto trotz hat mir das Frontend-Entwickeln spass gemacht und ich bin sehr zufrieden mit dem Ergebis.
 
-Meiner Meinung nach war die 3. Semesterarbeit ein Erfolg ! 
+Meiner Meinung nach war die 3. Semesterarbeit ein Erfolg !
