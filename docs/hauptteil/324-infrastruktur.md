@@ -22,7 +22,7 @@ Die zugewiesene Elastic IP ist:
 
 Für die Sicherheitsgruppe der Instanz erlauben ich SSH für das Management den Port 443 für den Loadbalancer und HTTP damit man auf die Webseite kommt.
 
-![Sicherheitsgruppe Eingehend](../ressources/images/frontend/Inbound_rule.png.PNG){: width="1000px" }
+![Sicherheitsgruppe Eingehend](../ressources/images/frontend/Inbound_rule.PNG){: width="1000px" }
 
 ## Load Balancer
 
