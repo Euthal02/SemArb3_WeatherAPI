@@ -90,11 +90,11 @@ jobs:
           echo "Running unit tests... This will take about 60 seconds."
           python -m pytest
         env:
-          API_KEY: "${{ secrets.API_KEY }}"
-          ASSISTANT_ID: "${{ secrets.ASSISTANT_ID }}"
-          ORGANIZATION: "${{ secrets.ORGANIZATION }}"
-          PROJECT: "${{ secrets.PROJECT }}"
-          WEATHER_API_KEY: "${{ secrets.WEATHER_API_KEY }}"
+          API_KEY: "${ secrets.API_KEY }"
+          ASSISTANT_ID: "${ secrets.ASSISTANT_ID }"
+          ORGANIZATION: "${ secrets.ORGANIZATION }"
+          PROJECT: "${ secrets.PROJECT }}"
+          WEATHER_API_KEY: "${ secrets.WEATHER_API_KEY }"
 ```
 
 ![Test Stage during deployment](../ressources/images/backend/test_stage_pipeline.PNG){: width="1000px" }

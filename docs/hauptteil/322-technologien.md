@@ -3,7 +3,7 @@ layout: default
 title: 3.2.2 Technologien
 parent: 3.2 Frontend
 grand_parent: 3. Hauptteil
-nav_order: 320
+nav_order: 322
 ---
 
 # 3.2.2 Technologien
@@ -16,7 +16,7 @@ In diesem Abschnitt werden die im Frontend verwendeten Technologien genauer besc
 
 ### Vue und Vite
 
-Was ist Vue und Vite ? 
+Was ist Vue und Vite ?
 Vue ist ein JavaScript-Framework, das Entwicklern hilft, interaktive Webseiten zu erstellen. Es ist einfach zu benutzen und macht es leicht, Teile der Webseite
 wiederzuverwenden.
 
