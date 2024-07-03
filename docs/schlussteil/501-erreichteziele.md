@@ -24,7 +24,7 @@ Alle diese Ziele konnten wir während der Semesterarbeit erreicht und dokumentie
 
 ## Wie ist es uns gelungen diese Ziele zu erreichen
 
-Damit wir einen Überblick oder einen Leitfaden durch die ganze Semesterarbeit hatten, habe wir erneut mit Github Project gearbeitet. Wir hatte ein gutes Projektmanagement und haben unsere Ziele in dei Meilensteine eingetragen. So hatten wir immer die Übersicht, welche Ziele noch nicht erreicht wurden und welche noch zu erreichen waren.
+Damit wir einen Überblick oder einen Leitfaden durch die ganze Semesterarbeit hatten, habe wir erneut mit Github Project gearbeitet. Wir hatte ein gutes Projektmanagement und haben unsere Ziele in die Meilensteine eingetragen. So hatten wir immer die Übersicht, welche Ziele noch nicht erreicht wurden und welche noch zu erreichen waren.
 
 Das Projektmanagement kann hier nochmals eingesehen werden:
 
