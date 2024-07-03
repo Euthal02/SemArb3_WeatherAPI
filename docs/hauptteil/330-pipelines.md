@@ -42,4 +42,3 @@ on:
     branches:
       - main
 ```
-

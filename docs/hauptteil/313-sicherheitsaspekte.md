@@ -91,7 +91,6 @@ jobs:
     environment: backend_env_vars
     needs: build-job
     steps:
-      ...
 
       - name: Create .env file
         run: |
