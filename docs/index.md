@@ -12,7 +12,7 @@ Wir freuen uns Sie hier näher an unsere Semesterarbeit zu bringen!
 
 ![Projektarbeit](ressources/icons/analytics.png){: width="250px" }
 
-[Quelle Bild - Icons](anhang/quellen.html#54-icons)
+[Quelle Bild - Icons](anhang/600-quellen.html#64-icons)
 
 Unsere Semesterarbeit ist in drei Teile gegliedert. Eine Einleitung, den Hauptteil und den Schlussteil.
 
@@ -25,4 +25,4 @@ Alles Files und weitere Informationen sind hier auf dem GitHub Repo zu finden.
 
 ![Github](ressources/icons/github_logo.png){: width="250px" }
 
-[Quelle Bild - Icons](anhang/quellen.html#54-icons)
+[Quelle Bild - Icons](anhang/600-quellen.html#64-icons)

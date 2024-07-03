@@ -12,7 +12,7 @@ In diesem Abschnitt werden die im Frontend verwendeten Technologien genauer besc
 
 ![Anforderungen](../ressources/icons/technology.png){: width="250px" }
 
-[Quelle Bild - Icons](../anhang/quellen.html#54-icons)
+[Quelle Bild - Icons](../anhang/600-quellen.html#64-icons)
 
 ## GUI
 

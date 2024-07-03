@@ -11,6 +11,8 @@ In diesem Abschnitt werden wir unsere Semesterarbeit reflektieren. Wir werden di
 
 ![Finish](../ressources/icons/exchange.png){: width="250px" }
 
+[Quelle Bild - Icons](../anhang/600-quellen.html#64-icons)
+
 ## Backend (Marco)
 
 ## Frontend (Dennis)

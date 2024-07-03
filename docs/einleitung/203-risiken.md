@@ -9,7 +9,7 @@ nav_order: 203
 
 Bei Projektarbeiten ist immer mit Risiken zu rechnen. Diese können aber im Vorhinein eingeschätzt und Massnahmen geplant werden. Dadurch wird gewährleistet, dass das Projekt wie geplant durchgeführt und die Ziele erreicht werden können.
 
-### Mit folgenden Risiken sind während der Arbeit zu rechnen:
+## Mit folgenden Risiken sind während der Arbeit zu rechnen
 
 | **Risiko** | **Eintrittswahrscheinlichkeit** |**Vorbereitung** | **Lösung**|
 | -------------- | ---------------------- | --------- | --------- |

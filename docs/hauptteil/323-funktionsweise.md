@@ -13,7 +13,7 @@ In diesem Abschnitt wird die Funktionsweise des Frontends beschrieben.
 
 ![Funktionalität](../ressources/icons/functional.png){: width="250px" }
 
-[Quelle Bild - Icons](../anhang/quellen.html#54-icons)
+[Quelle Bild - Icons](../anhang/600-quellen.html#64-icons)
 
 Um die Wetterdaten lesen zu können, braucht es ein Frontend. Was das Frontend alles können muss, wurde bereits bei den Anforderungen geklärt.
 
@@ -24,6 +24,8 @@ Das Frontend meldet sich am Backend mit E-Mail und Passwort an. Nach der Anmeldu
 So sieht eine Ausgabe aus:
 
 ![Screenshot](../ressources/images/frontend/Webseite.jpg)
+
+[Quelle Bild - Selbsterstellt](../anhang/600-quellen.html#61-bilder)
 
 Einiges im Frontend habe ich mit ChatGPT Programmiert, da ich keinerlei Erfahrungen mit Frontendentwicklung habe und dies auch nicht das Kernthema der Arbeit war. Ich bin sehr erstaunt wie einfach man ein schlichtes Frontend mittels ChatGPT entwickeln kann.
 

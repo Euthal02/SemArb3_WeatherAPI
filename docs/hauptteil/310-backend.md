@@ -22,3 +22,5 @@ Zum Backend gelangt man über diesen Link:
 !WICHTIG: Dieser Link funktioniert nur, wenn die AWS Academy von Marco Kälin gestartet ist!
 
 ![Backend](../ressources/icons/backend.png){: width="250px" }
+
+[Quelle Bild - Icons](../anhang/600-quellen.html#64-icons)

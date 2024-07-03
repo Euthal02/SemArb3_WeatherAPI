@@ -22,8 +22,8 @@ Folgende Punkte betreffen auch uns, welche wir während dem CSEC Modul angeschau
 * Bei Verwendung CI/CD: SaST aktivieren
 * Netzwerksicherheit, Eigene Netzwerke verwenden
 * Container Tags verwenden
-* Signalhandling beachten, https://github.com/Yelp/dumb-init
-* Logfiles weiterleiten https://github.com/kubernetes/ingress-nginx/blob/main/rootfs/Dockerfile
+* Signalhandling beachten, <https://github.com/Yelp/dumb-init>
+* Logfiles weiterleiten <https://github.com/kubernetes/ingress-nginx/blob/main/rootfs/Dockerfile>
 * setproctitle - verwenden für korrekten Prozess-Namen in Linux
 * Für Monitoring (Prometheus), /metrics implementieren.
 * Klein-/Grossschreibung berücksichtigen. Problem Windows/Linux siehe writer

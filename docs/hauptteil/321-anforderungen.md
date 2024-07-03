@@ -12,7 +12,7 @@ Damit das Frontend entwickelt werden kann, müssen erste die Anforderungen daran
 
 ![Anforderungen](../ressources/icons/requirement.png){: width="250px" }
 
-[Quelle Bild - Icons](../anhang/quellen.html#54-icons)
+[Quelle Bild - Icons](../anhang/600-quellen.html#64-icons)
 
 - Schlichtes UI
 - Button der Klickbar ist
@@ -26,3 +26,5 @@ Unsere Anforderungen an das Frontend wurden relativ schnell klar, da wir es schl
 So sieht unsere Skizze aus
 
 ![Anforderungen](../ressources/diagrams/Skizze_Webseite.png){: width="500x" }
+
+[Quelle Bild - Selbsterstellt](../anhang/600-quellen.html#61-bilder)

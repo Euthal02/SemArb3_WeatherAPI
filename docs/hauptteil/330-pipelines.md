@@ -29,7 +29,7 @@ Der Github Pages Branch unterscheidet sich von den anderen beiden. Dieser dient 
           working-directory: '${{ github.workspace }}/docs'
 ```
 
-Die Pipeline für das Frontend und Backend sind gleich aufgebaut. Darin haben wir mehr selbst gebaute Funktionen. Viele davon haben wir auch bereits im Modul MSVC 
+Die Pipeline für das Frontend und Backend sind gleich aufgebaut. Darin haben wir mehrere selbst gebaute Funktionen. Viele davon haben wir auch bereits im Modul MSVC genutzt.
 
 Mittels diesem directive wir gesteuert, dass die Pipelines nur aktiviert werden, wenn es auch Commits gibt, welche den betroffenen Ordner bearbeiten. Ausserdem werden nur Commits beachtet welche auch im Main Branch gepusht werden. Sollte es einen Feature Branch geben, wird nicht auf diesen geachtet.
 

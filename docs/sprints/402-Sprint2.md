@@ -12,6 +12,8 @@ Hier sind die Erkenntnisse des zweiten Sprintmeetings.
 ![Star 1](../ressources/icons/star.png){: width="220px" }
 ![Star 2](../ressources/icons/star.png){: width="220px" }
 
+[Quelle Bild - Icons](../anhang/600-quellen.html#64-icons)
+
 ## Was ist gut gelaufen? Was konnte bereits erreicht werden?
 
 ## Marco
@@ -47,6 +49,8 @@ Bei diesem Sprint konnten wir uns voll und ganz auf die praktische Umsetzung uns
 
 ![Projektstatus Sprint 2](../ressources/images/scrum/projektstatus_sprint2.PNG)
 
+[Quelle Bild - Selbsterstellt](../anhang/600-quellen.html#61-bilder)
+
 ## Warum ist der kommende Sprint wichtig?
 
 Im kommenden und somit letzten Sprint, ist es wichtig, dass wir unsere Dokumentation sauber abschliessen und den Vortrag erstellen können.
@@ -60,3 +64,5 @@ Wir müssen nun die Zeit im Auge behalten, damit wir alles rechtzeitig und volls
 Da wir die praktische Umsetzung bereits abschliessen konnten, können wir uns nun gänzlich auf die Dokumentation und den Abschluss konzentieren.
 
 ![Preview Print 3](../ressources/images/scrum/preview_projektstatus_sprint3.PNG)
+
+[Quelle Bild - Selbsterstellt](../anhang/600-quellen.html#61-bilder)

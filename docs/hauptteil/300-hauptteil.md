@@ -15,7 +15,7 @@ Am Ende eines Sprints sollten die gesetzten Ziele erreicht werden. Dann werden n
 
 ![Hauptteil](../ressources/icons/homepage.png){: width="250px" }
 
-[Quelle Bild - Icons](../anhang/quellen.html#6.4-icons)
+[Quelle Bild - Icons](../anhang/600-quellen.html#64-icons)
 
 In der Dokumentation wird der Hauptteil genauer verfolgt und Erkenntnisse festgehalten.
 

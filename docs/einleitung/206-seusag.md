@@ -9,6 +9,8 @@ nav_order: 206
 
 ![SEUSAG](../ressources/diagrams/weatherapi.drawio.png)
 
+[Quelle Bild - Selbsterstellt](../anhang/600-quellen.html#61-bilder)
+
 1. Wird aus Github Pipeline erstellt / deployt.
 2. Die Pipeline buildet ein Docker Image, die Inhalte des Images sind als Bilder eingefügt.
 3. Nach dem Builden wird die deploy Stage ausgeführt. Wir deployen auf eine AWS Academy Instanz.

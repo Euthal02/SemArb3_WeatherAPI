@@ -15,7 +15,7 @@ Durch Kanban-Boards wird der aktuelle Stand der Arbeit deutlich sichtbar, was da
 
 ![Kanban Board](../ressources/icons/kanban.png){: width="250px" }
 
-[Quelle Bild - Icons](../anhang/quellen.html#54-icons)
+[Quelle Bild - Icons](../anhang/600-quellen.html#64-icons)
 
 ## Scrum
 
@@ -25,7 +25,7 @@ Im Mittelpunkt von Scrum steht ein iterativer Ansatz, der sich auf inkrementelle
 
 ![Scrum](../ressources/icons/scrum.png){: width="250px" }
 
-[Quelle Bild - Icons](../anhang/quellen.html#54-icons)
+[Quelle Bild - Icons](../anhang/600-quellen.html#64-icons)
 
 ## Kanban und Scrum in unserer Semesterarbeit
 

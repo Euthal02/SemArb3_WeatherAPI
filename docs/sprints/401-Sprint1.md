@@ -11,6 +11,8 @@ Hier sind die Erkenntnisse des ersten Sprintmeetings.
 
 ![Star](../ressources/icons/star.png){: width="220px" }
 
+[Quelle Bild - Icons](../anhang/600-quellen.html#64-icons)
+
 ## Was ist gut gelaufen? Was konnte bereits erreicht werden?
 
 ## Marco
@@ -41,6 +43,8 @@ Beim letzten Sprint haben wir uns vor allem auf das Projekmanagement fokussiert.
 
 ![Projektstatus Sprint 1](../ressources/images/scrum/projektstatus_sprint1.PNG)
 
+[Quelle Bild - Selbsterstellt](../anhang/600-quellen.html#61-bilder)
+
 ## Warum ist der kommende Sprint wichtig?
 
 Im kommenden Sprint möchten wir so richtig mit der fachlichen Umsetzung unserer Arbeit beginnen. Wir können entlich das mühsame Projektmanagement hinter uns lassen und mit der Arbeit beginnen.
@@ -54,3 +58,5 @@ Wenn wir uns besser abstimmen können und miteinander arbeiten können, haben wi
 Da unserer Vorbereitungsarbeiten uns gut gelungen sind, können wir uns auf den fachlichen Teil konzentrieren. Wie man von den Meilensteinen entnehmen kann, besteht der 2. Sprint nur aus technischen Arbeiten, auf welche wir uns freuen.
 
 ![Preview Print 2](../ressources/images/scrum/preview_projektstatus_sprint2.PNG)
+
+[Quelle Bild - Selbsterstellt](../anhang/600-quellen.html#61-bilder)

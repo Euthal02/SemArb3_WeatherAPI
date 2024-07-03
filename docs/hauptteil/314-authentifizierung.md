@@ -22,6 +22,8 @@ Momentan haben wir also folgende Routen:
 
 ![User Routen](../ressources/images/backend/user_routen.PNG){: width="1000px" }
 
+[Quelle Bild - Selbsterstellt](../anhang/600-quellen.html#61-bilder)
+
 ## CRUD Prinzip
 
 ### READ

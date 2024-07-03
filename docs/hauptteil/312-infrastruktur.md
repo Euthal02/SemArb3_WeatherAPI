@@ -26,11 +26,15 @@ Für die Sicherheitsgruppe der Instanz erlauben wir lediglich SSH für das Manag
 
 ![Sicherheitsgruppe Eingehend](../ressources/images/backend/sicherheitsgruppe_ec2.PNG){: width="1000px" }
 
+[Quelle Bild - Selbsterstellt](../anhang/600-quellen.html#61-bilder)
+
 ## Load Balancer
 
 Da uns die EC2 Instanz eine Öffentliche IP bereitstellt, nutzen wir die Chance des AWS Load Balancers um ein Zertifikat für unseren Service zu erhalten. Der Load Balancer beinhaltet folgende Teile. Jede Abfrage auf den Load Balancer muss durch jedes Teilstück durchgehen.
 
 ![Ressourcenkarte AWS](../ressources/images/backend/ressourcenkarte_aws.PNG){: width="1000px" }
+
+[Quelle Bild - Selbsterstellt](../anhang/600-quellen.html#61-bilder)
 
 Zusätzlich ist auf dem Listener ein Zertifikat bereitgestellt, für die Domain:
 
@@ -38,7 +42,9 @@ Zusätzlich ist auf dem Listener ein Zertifikat bereitgestellt, für die Domain:
 
 ![Listener mit Zertifikat](../ressources/images/backend/listener_mit_zertifikat.PNG){: width="1000px" }
 
-Dazu musste ich au meiner Domain folgende Einträge hinzufügen:
+[Quelle Bild - Selbsterstellt](../anhang/600-quellen.html#61-bilder)
+
+Dazu musste ich auf meiner Domain folgende Einträge hinzufügen:
 
 ``` bash
 ...

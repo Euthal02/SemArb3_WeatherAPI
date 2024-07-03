@@ -15,11 +15,17 @@ Alle Files und Bilder sind hier zu finden:
 
 ![Sources](../ressources/icons/sources.png){: width="250px" }
 
-[Quelle Bild - Icons](../anhang/quellen.html#54-icons)
+[Quelle Bild - Icons](./600-quellen.html#64-icons)
 
 ## 6.1 Bilder
 
 Woher stammen die genutzten Bilder meiner Abschlussarbeit?
+
+Die meisten Bilder sind selbst erstellt.
+
+### 6.1.1 OpenWeatherMap
+
+<https://www.home-assistant.io/integrations/openweathermap/>
 
 ## 6.2 Hilfsmittel
 
@@ -33,7 +39,7 @@ Das reicht von Tools, die ich nutzen kann, bis zu Webseiten, bei welchen ich mir
 
 ## 6.3 Vorarbeit
 
-Einige Teile meiner Arbeit sind von anderen erstellt. Hier werden die fremden Teile identifiziert.
+Wir nutzen unter anderem das erarbeitete Wissen des Moduls MSVC.
 
 ## 6.4 Icons
 

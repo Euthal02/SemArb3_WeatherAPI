@@ -13,6 +13,8 @@ Hier sind die Erkenntnisse des dritten Sprintmeetings.
 ![Star 2](../ressources/icons/star.png){: width="220px" }
 ![Star 3](../ressources/icons/star.png){: width="220px" }
 
+[Quelle Bild - Icons](../anhang/600-quellen.html#64-icons)
+
 ## Was ist gut gelaufen? Was konnte bereits erreicht werden?
 
 ## Marco

@@ -98,3 +98,5 @@ jobs:
 ```
 
 ![Test Stage during deployment](../ressources/images/backend/test_stage_pipeline.PNG){: width="1000px" }
+
+[Quelle Bild - Selbsterstellt](../anhang/600-quellen.html#61-bilder)
