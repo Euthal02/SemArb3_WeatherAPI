@@ -31,6 +31,16 @@ Der Github Pages Branch unterscheidet sich von den anderen beiden. Dieser dient 
 
 Die Pipeline für das Frontend und Backend sind gleich aufgebaut. Darin haben wir mehrere selbst gebaute Funktionen. Viele davon haben wir auch bereits im Modul MSVC genutzt.
 
+Zum Beispiel diese Funktion in der Backend Pipeline. Sie ist mittels einfachen Linux Befehlen aufgebaut und "buildet" einen Container aus unserem Dockerfile, welcher anschliessend auf die GHCR gepusht wird.
+
+``` yaml
+- name: Build and push Docker image
+  run: |
+    cd backend/
+    docker build -t ghcr.io/euthal02/semarb3_weatherapi:latest -f Dockerfile.prod .
+    docker push ghcr.io/euthal02/semarb3_weatherapi:latest
+```
+
 Mittels diesem directive wir gesteuert, dass die Pipelines nur aktiviert werden, wenn es auch Commits gibt, welche den betroffenen Ordner bearbeiten. Ausserdem werden nur Commits beachtet welche auch im Main Branch gepusht werden. Sollte es einen Feature Branch geben, wird nicht auf diesen geachtet.
 
 ```yaml
