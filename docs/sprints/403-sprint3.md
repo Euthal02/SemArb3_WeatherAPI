@@ -25,6 +25,8 @@ In diesem Sprint konnten wir erreichen, dass unsere beiden Applikationen miteina
 
 ## Was hat nicht funktioniert? Was war nicht gut? Welche Aspekte sollen entfallen?
 
+Wir sind der Meinung das eine klare Rollenverteilung und verbindliche Termine während unserer Arbeit gefehlt haben. Wir haben uns nicht genügend abgesprochen und fuhren häufig zweigleisig.
+
 ## Was soll aufgrund der gemachten Erfahrungen ausprobiert werden?
 
 wir würden die Rollenverteilung besser machen, in zukünftigen Projekten. Auch würden wir direkt von Beginn des Projekts verbindliche Termine vereinbaren, an welche sich jedes Mitglied halten muss. Wir hatten während dieser Arbeit einen eher lockeren Ansatz, was das Zeit- und Ressourcenmanagement angeht.
