@@ -23,6 +23,8 @@ In diesem Sprint konnten wir erreichen, dass unsere beiden Applikationen miteina
 
 ## Dennis
 
+Wir konnten alle Meilensteine erreichen und uns vollkommen auf den Abschluss der Semesterarbeit konzentieren. Jetzt fehlt uns noch die Präsentation, welche wir ebenfalls gemeinsam halten werden.
+
 ## Was hat nicht funktioniert? Was war nicht gut? Welche Aspekte sollen entfallen?
 
 Wir sind der Meinung das eine klare Rollenverteilung und verbindliche Termine während unserer Arbeit gefehlt haben. Wir haben uns nicht genügend abgesprochen und fuhren häufig zweigleisig.
